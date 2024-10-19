@@ -1,0 +1,1280 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap");
+
+
+:root{
+    --main-color: #242424;
+    --black-color: #242424;
+    --border: 0.1rem solid rgba(255,255,255,0.4);
+}
+
+* {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: 0.2s ease;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+}
+
+.dropdown-content {
+    position: absolute;
+    top: 83%; /* make the dropdown menu open below the button */
+    left: 85%;
+    width: 10%;
+    height: auto;
+    background-color: white;
+    padding-left: 1.5rem;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    z-index: 110%;
+    border-radius: 3rem;
+  }
+
+  .dropdown-content img {
+    margin-right: 8px; /* Yazı ve fotoğraf arasında boşluk bırakmak için */
+    width: 15%; /* Genişliği ayarlayın */
+    height: auto; /* Yüksekliği otomatik ayarlayın */
+    object-fit: contain; /* Fotoğrafın tamamını göstermek için contain kullanın */
+}
+
+.dropdown-content a {
+    display: flex; /* Flexbox kullanarak içeriği hizalamak için */
+    align-items: center; /* Dikey olarak ortalamak için */
+    justify-content: center; /* Yatay olarak ortalamak için */
+    color: black;
+    padding: 12px 5px;
+    text-decoration: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-right: 16px;
+    overflow: visible; /* add overflow visible to buttons */
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+    border-radius: 1.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.navbar .btnta .flag-icon {
+    width: 35px;
+    height: 35px;
+  }
+
+  .btnta {
+    position: absolute;
+    right: 170px;
+    top: 55%;
+    transform: translateY(-50%);
+  }
+
+.logo img {
+    height: 7rem;
+}
+
+body{
+    background-color: var(--main-color);
+}
+
+section{
+    padding: 3.75rem 7%;
+}
+
+.header .logo img{
+    height: 7rem;
+    margin-top: 0.5rem;
+}
+
+.header .buttons i{
+    color: #fff;
+}
+
+.header {
+    background-color: var(--black-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 7%;
+    margin: 2rem;
+    box-shadow: 0px 0px 17px -2px rgba(0,0,0,0.75);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header .navbar a{
+    margin: 0 1rem;
+    font-size: 1.6rem;
+    color: #ffff;
+    border-bottom: 0.1rem solid transparent;
+}
+
+.header .navbar .active,
+.header .navbar a:hover{
+    border-color: #ffff;
+    padding-bottom: 0.5rem;
+}
+
+.header .buttons button {
+    cursor: pointer;
+    font-size: 2.5rem;
+    margin-left: 2rem;
+    background-color: transparent;
+}
+
+.home {
+    min-height: 100vh;
+    background: url(../images/home.png)
+    no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-top: -14.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.home .video{
+    margin-top: 5rem;
+    width: 5rem;
+}
+
+.home .content {
+    max-width: 70rem;
+}
+
+.home .content h3 {
+    font-size: 10rem;
+    color: #ffff;
+    line-height: 1;
+}
+
+.home .content p {
+    font-size: 2rem;
+    font-weight: 300;
+    line-height: 1.5;
+    padding: 1rem 0;
+    color: #fff;
+}
+
+.btn{
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 2rem 3.75rem;
+    border-radius: 30rem;
+    font-size: 1.7rem;
+    color: #ffff;
+    background-color: #c52525;
+    cursor: pointer;
+}
+
+.menu .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+}
+
+.menu .box-container .box{
+    padding: 3rem;
+    background-color: #fff;
+    border-radius: 3rem;
+    background-color: #fff;
+    min-height: 60rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.menu .box-container .box img{
+    width: 100%;
+    object-fit: cover;
+}
+
+.menu .box-container .box .menu-category{
+    font-size: 1.4rem;
+}
+
+.menu .box-container .box h3{
+    font-size: 3rem;
+    padding: 1rem 0;
+}
+
+.menu .box-container .box .price{
+    font-size: 1.5rem;
+    padding: 0.5rem 0;
+}
+
+.heading{
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 4rem;
+    margin-bottom: 3.5rem;
+    border-bottom: 0.1rem solid #f83434;
+}
+
+html::-webkit-scrollbar{
+    width: 0.8rem;
+    background-color: white;
+}
+
+html::-webkit-scrollbar-track{
+    background-color: #242424;
+}
+
+html::-webkit-scrollbar-thumb{
+    border-radius: 3rem;
+    background-color: #f83434;
+}
+
+.menu .box-container .box img{
+    border-radius: 3rem;
+    background-color: #f83434;
+}
+
+.about .row .image{
+    flex: 1 1 45rem;
+    background-color: #f83434;
+    border-radius: 3rem;
+}
+
+.about .row img{
+    width: 100%;
+    background-color: #f83434;
+    border-radius: 2rem;
+    margin-top: 2rem;
+    margin-left: 2rem;
+    margin-bottom: 2rem;
+}
+
+.about .row{
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 2rem;
+    background-color: #f83434;
+    border-radius: 3rem;
+}
+
+.about .row .content{
+    flex: 1 1 45rem;
+    background-color: #f83434;
+    border-radius: 3rem;
+}
+
+.about .row .content h3{
+    font-size: 4rem;
+    color: #fff;
+    background-color: #f83434;
+    border-radius: 3rem;
+    margin-top: 1rem;
+    margin-left: 1.5rem;
+}
+
+.about .row .content p{
+    font-size: 1.5rem;
+    color: #fff;
+    font-weight: 300;
+    padding: 1rem 0;
+    line-height: 1.8;
+    background-color: #f83434;
+    text-transform: none;
+    margin-left: 1.5rem;
+}
+
+.tulpar .row {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 2rem;
+    background-color: #f83434;
+    border-radius: 3rem;
+    flex-direction: row-reverse; /* Add this line */
+}
+
+.tulpar .row .image {
+    flex: 1 1 45rem;
+    background-color: #f83434;
+    border-radius: 3rem;
+    order: 1; /* Add this line */
+}
+
+.tulpar .row img {
+    width: 97%; /* Adjust the width to your desired size */
+    margin-top: 2rem; /* Add some margin to maintain spacing */
+    margin-right: 4rem;
+    border-radius: 3rem;
+    margin-bottom: 2rem;
+    margin-right: 2rem;
+}
+
+.tulpar .row .content {
+    flex: 1 1 45rem;
+    background-color: #f83434;
+    border-radius: 3rem;
+    order: 2;
+}
+
+.tulpar .row .content h3{
+    font-size: 4rem;
+    color: #fff;
+    background-color: #f83434;
+    border-radius: 3rem;
+    margin-top: 2rem;
+    margin-left: 2rem;
+}
+
+.tulpar .row .content p{
+    font-size: 1.5rem;
+    color: #fff;
+    font-weight: 300;
+    padding: 1rem 0;
+    line-height: 1.8;
+    background-color: #f83434;
+    text-transform: none;
+    margin-left: 2rem;
+}
+
+.basarilar{
+    background-color: #f83434;
+    margin-top: 5rem;
+}
+
+.basarilar .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+}
+
+.basarilar .box-container .box{
+    padding: 3rem;
+    background-color: #fff;
+    border-radius: 3rem;
+    background-color: #fff;
+    min-height: 60rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.basarilar .box-container .box img{
+    width: 100%;
+    object-fit: cover;
+    border-radius: 3rem;
+}
+
+.basarilar .box-container .box .menu-category{
+    font-size: 1.4rem;
+}
+
+.basarilar .box-container .box h3{
+    font-size: 5rem;
+    padding: 1rem 0;
+}
+
+.basarilar .box-container .box p{
+    font-size: 2rem;
+    padding: 0.5rem 0;
+    text-transform: none;
+}
+
+.sp .row {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 2rem;
+    background-color: #f83434;
+    border-radius: 3rem;
+    flex-direction: row-reverse; /* Add this line */
+}
+
+.sp .row .image {
+    flex: 1 1 45rem;
+    background-color: #f83434;
+    border-radius: 3rem;
+    order: 1; /* Add this line */
+}
+
+.sp .row img {
+    width: 96%; /* Adjust the width to your desired size */
+    margin-top: 2rem; /* Add some margin to maintain spacing */
+    margin-right: 4rem;
+    border-radius: 3rem;
+    margin-bottom: 2rem;
+    margin-left: -0.5rem;
+}
+
+.sp .row .content {
+    flex: 1 1 100rem;
+    background-color: #f83434;
+    border-radius: 3rem;
+    order: 2;
+}
+
+.sp .row .content h3{
+    font-size: 4rem;
+    color: #fff;
+    background-color: #f83434;
+    border-radius: 3rem;
+    margin-top: 2rem;
+    margin-left: 2rem;
+}
+
+.sp .row .content p{
+    font-size: 1.5rem;
+    color: #fff;
+    font-weight: 300;
+    padding: 1rem 0;
+    line-height: 1.8;
+    background-color: #f83434;
+    text-transform: none;
+    margin-left: 2rem;
+}
+
+.sp2 .row .image{
+    flex: 1 1 45rem;
+    background-color: #f83434;
+    border-radius: 3rem;
+}
+
+.sp2 .row img{
+    width: 100%;
+    background-color: #f83434;
+    border-radius: 3rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.sp2 .row{
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 2rem;
+    background-color: #f83434;
+    border-radius: 3rem;
+}
+
+.sp2 .row .content{
+    flex: 1 1 100rem;
+    background-color: #f83434;
+    border-radius: 3rem;
+    margin-left: 2rem;
+}
+
+.sp2 .row .content h3{
+    font-size: 4rem;
+    color: #fff;
+    background-color: #f83434;
+    border-radius: 3rem;
+    margin-top: 1rem;
+}
+
+.sp2 .row .content p{
+    font-size: 1.5rem;
+    color: #fff;
+    font-weight: 300;
+    padding: 1rem 0;
+    line-height: 1.8;
+    background-color: #f83434;
+    text-transform: none;
+}
+
+.contact .row{
+    display: flex;
+    background-color: black;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.contact .row .map{
+    flex: 1 1 45rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+.contact .row .inputbox{
+    flex: 1 1 45rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+.contact .row a i,
+.contact .row a i span{
+    color: #f83434;
+}
+
+.contact .row h3{
+    text-transform: none;
+    color: white;
+    font-size: 2rem;
+    padding: 2rem;
+}
+
+.contact .row p,
+.contact .row i,
+.contact .row i span{
+    flex: 1 1;
+    display: flex;
+    line-height: 1.8;
+    text-transform: none;
+    color: white;
+    font-size: 1.5rem;
+    margin-left: 1rem;
+    padding: 0.2rem;
+}
+
+.footer{
+    background-color: #f83434;
+    text-align: center;
+
+}
+
+.footer .search{
+    display: flex;
+    justify-content: center;
+}
+
+.footer .search .search-input{
+    width: 30rem;
+}
+
+.footer .search .btn-primary{
+    background-color: #242424;
+    padding: 1rem 2rem;
+    margin-left: 1rem;
+}
+
+.search-input{
+    font-size: 1.6rem;
+    color: #ffffff;
+    padding: 1rem;
+    text-transform: none;
+    border-radius: 3rem;
+}
+
+.footer .credit{
+    font-size: 1rem;
+    margin-top: 2rem;
+}
+
+@media (max-width: 991px){
+    html{
+        font-size: 55%;
+    }
+
+    .header{
+        padding: 1.5rem 2rem;
+    }
+
+    .header .logo img{
+        height: 7rem;
+    }
+
+    section {
+        padding: 2rem;
+    }
+}
+
+/*slide*/
+.slideshow-container {
+    position: relative;
+    width: 60%;
+    height: 500px;
+    overflow: hidden;
+  }
+
+.video{
+    position: absolute;
+    left: 60%;
+    width: 100%;
+    margin-top: 3rem;
+    top: 115%;
+  }
+
+.video h1{
+    border-bottom: none;
+    color: white;
+    font-size: 4rem;
+    text-transform: capitalize;
+    background-color: #f83434;
+    border-radius: 3rem;
+    text-align: center;
+    margin-right: 131.11rem;
+    margin-bottom: 2rem;
+}
+  
+  .slide {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .slide.active {
+    transform: translateX(-100%);
+    z-index: 1;
+  }
+  
+  .slide.prev {
+    transform: translateX(0);
+    z-index: 0;
+  }
+  
+  .slide:not(.active):not(.prev) {
+    transform: translateX(100%);
+  }
+  
+  .prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    cursor: pointer;
+    color: #fff;
+    font-size: 5rem;
+  }
+  
+  .prev {
+    left: 20px;
+  }
+  
+  .next {
+    right: 20px;
+  }
+  
+  .dots {
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+  }
+  
+  .dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: white;
+    margin: 5px;
+    cursor: pointer;
+    z-index: 2;
+  }
+  
+  .dot.active {
+    background-color: #f83434;
+  }
+  
+  .slideshow-container .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  
+  .slideshow-container .slide .text {
+    position: absolute;
+    top: 85%;
+    left: 3%;
+    color: #fff;
+    font-size: 24px;
+    text-align: center;
+    z-index: 2;
+    font-weight: 500;
+  }
+
+  .slideshow-container .slide .aciklama{
+    position: absolute;
+    top: 91%;
+    left: 3%;
+    color: #fff;
+    font-size: 24px;
+    text-align: center;
+    z-index: 2;
+    font-weight: 300;
+    font-size: 1.5rem;
+  }
+
+  /*loading screen*/
+  .loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #25252580; /* Set the background color to a semi-transparent gray */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .loading-container {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin: 40px auto;
+  }
+  
+  .lgo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    width: 13rem; /* Set the width of the logo */
+    height: 13rem; /* Set the height of the logo */
+  }
+  
+  .gear {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 15rem;
+    height: 15rem;
+    animation: spin 2s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+      transform: translate(-50%, -50%) rotate(360deg);
+    }
+  }
+
+  @media only screen and (max-width: 480px) {
+    .slideshow-container {
+      height: 100px; /* Adjust the height for mobile devices */
+    }
+    .dropdown-content {
+        position: absolute;
+        top: 76%; /* make the dropdown menu open below the button */
+        left: 63%;
+        width: 35%;
+        height: auto;
+        background-color: white;
+        padding-left: 1.5rem;
+        padding-bottom: 1rem;
+        padding-top: 1rem;
+        z-index: 110%;
+        border-radius: 3rem;
+      }
+    
+      .dropdown-content img {
+        margin-right: 8px; /* Yazı ve fotoğraf arasında boşluk bırakmak için */
+        width: 15%; /* Genişliği ayarlayın */
+        height: auto; /* Yüksekliği otomatik ayarlayın */
+        object-fit: contain; /* Fotoğrafın tamamını göstermek için contain kullanın */
+    }
+    
+    .dropdown-content a {
+        display: flex; /* Flexbox kullanarak içeriği hizalamak için */
+        align-items: center; /* Dikey olarak ortalamak için */
+        justify-content: center; /* Yatay olarak ortalamak için */
+        color: black;
+        padding: 12px 5px;
+        text-decoration: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        margin-right: 16px;
+        overflow: visible; /* add overflow visible to buttons */
+    }
+    
+    .dropdown-content a:hover {
+        background-color: #ddd;
+        border-radius: 1.5rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .home {
+        min-height: 100vh;
+        background: url(../images/homet.png)
+        no-repeat;
+        background-size: cover;
+        background-position: center;
+        margin-top: -14.5rem;
+        display: flex;
+        align-items: center;
+    }
+
+    .home .content h3{
+        font-size: 4rem;
+        position: absolute;
+        top: 75%;
+        left: 5%;
+
+    }
+
+    .home .content p{
+        font-size: 1.5rem;
+        position: absolute;
+        top: 83%;
+        left: 5%;
+    }
+
+    .home .btn{
+        position: absolute;
+        top: 89%;
+        left: 3%;
+    }
+
+    .sp .row img {
+        width: 95%; /* Adjust the width to your desired size */
+        margin-top: 1rem; /* Add some margin to maintain spacing */
+        margin-right: 4rem;
+        margin-left: 1rem;
+        border-radius: 3rem;
+    }
+    
+    .sp .row .content {
+        flex: 1 1 100rem;
+        background-color: #f83434;
+        border-radius: 3rem;
+        order: 2;
+    }
+    
+    .sp .row .content h3{
+        font-size: 4rem;
+        color: #fff;
+        background-color: #f83434;
+        border-radius: 3rem;
+        margin-top: 2rem;
+        margin-left: 2rem;
+    }
+    
+    .sp .row .content p{
+        font-size: 1.5rem;
+        color: #fff;
+        font-weight: 300;
+        padding: 1rem 0;
+        line-height: 1.8;
+        background-color: #f83434;
+        text-transform: none;
+        margin-left: 2rem;
+        border-radius: 3rem;
+    }
+    
+    .sp2 .row img{
+        width: 96%;
+        background-color: #f83434;
+        border-radius: 3rem;
+        margin-top: 1rem;
+        margin-left: 1rem;
+    }
+    
+    .sp2 .row{
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 2rem;
+        background-color: #f83434;
+        border-radius: 3rem;
+    }
+    
+    .sp2 .row .content{
+        flex: 1 1 100rem;
+        background-color: #f83434;
+        border-radius: 3rem;
+    }
+    
+    .sp2 .row .content h3{
+        font-size: 4rem;
+        color: #fff;
+        background-color: #f83434;
+        border-radius: 3rem;
+        margin-top: 1rem;
+        margin-left: 2rem;
+    }
+    
+    .sp2 .row .content p{
+        font-size: 1.5rem;
+        color: #fff;
+        font-weight: 300;
+        padding: 2rem;
+        line-height: 1.8;
+        background-color: #f83434;
+        text-transform: none;
+        border-radius: 3rem;
+    }
+
+    .about .row .content p{
+        padding: 2rem;
+        border-radius: 3rem;
+    }   
+
+    .about .row .content h3{
+        margin-left: 2rem;
+    }
+
+    .about .row img{
+        width: 91%;
+    }
+
+    .tulpar .row .content p{
+        padding: 2rem;
+        border-radius: 3rem;
+        line-height: 1.8;
+        margin-left: 0.5rem;
+    }   
+
+    .tulpar .row .content h3{
+        margin-left: 2rem;
+    }
+
+    .tulpar .row img{
+        width: 96%;
+        margin-left: 1rem;
+        margin-top: 1rem;
+    }
+
+    .dots {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 2;
+        margin-bottom: 20px;
+      }
+    
+    .dot{
+        width: 3px;
+        height: 3px;
+        bottom: 100px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 2;
+    }
+
+    .prev, .next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 2;
+        cursor: pointer;
+        color: #fff;
+        font-size: 2rem;
+      }
+
+      .slideshow-container {
+        position: relative;
+        width: 100%;
+        height: 300px;
+        overflow: hidden;
+        margin: 0 auto;
+        margin-bottom: 35rem;
+      }
+
+    .slideshow-container .slide .aciklama{
+        position: absolute;
+        top: 75%;
+        left: 3%;
+        color: #fff;
+        text-align: center;
+        z-index: 2;
+        font-weight: 300;
+        font-size: 0.5rem;
+    }
+    
+    .slideshow-container .slide .text {
+        position: absolute;
+        top: 65%;
+        left: 3%;
+        color: #fff;
+        font-size: 1rem;
+        text-align: center;
+        z-index: 2;
+        font-weight: 500;
+      /* You can also adjust the styles for .slide here if needed */
+    }
+
+
+    .video {
+        position: absolute;
+        left: -11%;
+        transform: translateX(-50%);
+        top: 160%;
+        margin-top: 20px;
+        transform: scale(0.7);
+      }
+    
+    .video h1{
+        border-bottom: none;
+        color: white;
+        font-size: 4rem;
+        text-transform: capitalize;
+        background-color: #f83434;
+        border-radius: 3rem;
+        text-align: center;
+        margin-right: 0rem;
+        margin-bottom: 2rem;
+    }
+
+    .navbar .btnta .flag-icon {
+        width: 35px;
+        height: 35px;
+        display: block;
+        visibility: visible;
+      }
+    
+      .btnta {
+        position: absolute;
+        right: 45px;
+        top: 50%;
+        transform: translateY(-50%);
+        display: block;
+        visibility: visible;
+      }
+      
+      .header .navbar {
+        overflow-x: auto;
+        white-space: nowrap;
+        margin-right: 3rem;
+      }
+      .header .navbar a {
+        display: inline-block;
+        font-size: 1.6rem;
+      }
+    }
+
+  
+  /* For tablets with a screen width of 481px to 768px */
+  @media only screen and (min-width: 481px) and (max-width: 768px) {
+
+  }
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+    .sp .row img {
+        width: 100%; /* Adjust the width to your desired size */
+        margin-top: 1rem; /* Add some margin to maintain spacing */
+        margin-right: 4rem;
+        margin-left: -1rem;
+        border-radius: 3rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .sp .row .content {
+        flex: 1 1 50rem;
+        background-color: #f83434;
+        border-radius: 3rem;
+        order: 2;
+    }
+    
+    .sp .row .content h3{
+        font-size: 3rem;
+        color: #fff;
+        background-color: #f83434;
+        border-radius: 3rem;
+        margin-top: 2rem;
+        margin-left: 2rem;
+    }
+    
+    .sp .row .content p{
+        font-size: 1.5rem;
+        color: #fff;
+        font-weight: 300;
+        padding: 1rem 0;
+        line-height: 1.8;
+        background-color: #f83434;
+        text-transform: none;
+        margin-left: 2rem;
+        border-radius: 3rem;
+    }
+
+    .sp2 .row .image{
+        flex: 1 1 45rem;
+        background-color: #f83434;
+        border-radius: 3rem;
+    }
+    
+    .sp2 .row img{
+        width: 100%;
+        background-color: #f83434;
+        border-radius: 3rem;
+        margin-top: 0.5rem;
+        margin-left: 0.5rem;
+    }
+    
+    .sp2 .row{
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 2rem;
+        background-color: #f83434;
+        border-radius: 3rem;
+    }
+    
+    .sp2 .row .content{
+        flex: 1 1 50rem;
+        background-color: #f83434;
+        border-radius: 3rem;
+    }
+    
+    .sp2 .row .content h3{
+        font-size: 4rem;
+        color: #fff;
+        background-color: #f83434;
+        border-radius: 3rem;
+        margin-top: 1rem;
+    }
+    
+    .sp2 .row .content p{
+        font-size: 1.5rem;
+        color: #fff;
+        font-weight: 300;
+        padding: 1rem 0;
+        line-height: 1.8;
+        background-color: #f83434;
+        text-transform: none;
+    }
+
+    .basarilar .box-container{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+        gap: 1.5rem;
+    }
+
+    .basarilar .box-container .box {
+        padding: 1rem; /* Paddingi azaltarak iç boşluğu küçültüyoruz */
+        width: 100%;
+        height: auto;
+        background-color: #fff;
+        border-radius: 3rem;
+        min-height: 60rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+    
+    .basarilar .box-container .box img {
+        width: 100%;
+        object-fit: cover;
+        border-radius: 3rem;
+        margin-bottom: 1rem; /* Görsel ile içerik arasındaki mesafeyi azalt */
+    }
+    
+    .basarilar .box-container .box .menu-category {
+        font-size: 1.4rem;
+        margin-bottom: 0.1rem; /* Menü kategorisi ile başlık arasındaki mesafeyi azalt */
+    }
+    
+    .basarilar .box-container .box h3 {
+        font-size: 4rem;
+        padding: 0.2rem 0; /* Başlık içindeki paddingi azalt */
+        margin-bottom: 0.2rem; /* Başlık ile paragraf arasındaki mesafeyi azalt */
+    }
+    
+    .basarilar .box-container .box p {
+        font-size: 1.5rem;
+        padding: 0.5rem 0;
+        text-transform: none;
+        margin-bottom: 1rem; /* Paragraf ile diğer elemanlar arasındaki mesafeyi azalt */
+    }
+
+    .menu .box-container{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+        gap: 1.5rem;
+    }
+
+    .about .row .content p{
+        font-size: 1.24rem;
+        margin-right: 1rem;
+        color: #fff;
+        font-weight: 300;
+        padding: 1rem 0;
+        line-height: 1.8;
+        background-color: #f83434;
+        text-transform: none;
+        margin-left: 1.5rem;
+        border-radius: 3;
+    }
+    
+    .tulpar .row .content p{
+        font-size: 1.3rem;
+    }
+
+
+    .video {
+        position: absolute;
+        left: 48%;
+        top: 110%;
+        transform: scale(0.7); /* Scale the video to 50% of its original size */
+        margin-top: 3rem;
+        text-align: start;
+      }
+    
+    .video h1{
+        border-bottom: none;
+        color: white;
+        font-size: 4rem;
+        text-transform: capitalize;
+        background-color: #f83434;
+        border-radius: 3rem;
+        text-align: center;
+        margin-right: 64rem;
+    }
+
+    .dots {
+        position: absolute;
+        bottom: 55px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 2;
+      }
+      
+      .dot {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: white;
+        margin: 5px;
+        cursor: pointer;
+        z-index: 2;
+      }
+      
+      .dot.active {
+        background-color: #f83434;
+      }
+      
+      .slideshow-container .slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+      
+      .slideshow-container .slide .text {
+        position: absolute;
+        top: 72%;
+        left: 3%;
+        color: #fff;
+        font-size: 15px;
+        z-index: 2;
+        font-weight: 500;
+      }
+    
+      .slideshow-container .slide .aciklama{
+        position: absolute;
+        top: 75%;
+        left: 0.3%;
+        color: #fff;
+        z-index: 2;
+        font-weight: 300;
+        font-size: 1.5rem;
+      }
+}
+
+

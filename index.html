@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moon Star Robotics</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" type="image/png" href="images/favicon.png">
+
+</head>
+<body><header class="header">
+    <a href="#" class="logo">
+        <img src="images/logo.png" alt="logo">
+    </a>
+    <nav class="navbar">
+        <a href="#anasayfa" class="active">Anasayfa</a>
+        <a href="#haberler">Haberler</a>
+        <a href="#galeri">Galeri</a>
+        <a href="#hakkimizda">Hakkımızda</a>
+        <a href="#tulpar">Tulpar</a>
+        <a href="#basarilarimiz">Başarılarımız</a>
+        <a href="#sp">Sosyal Projelerimiz</a>
+        <a href="#iletisim">İletişim</a>
+    </nav>
+    <div class="buttons">
+        <button id="menu-toggle">
+            <i class="fa-solid fa-globe"></i>
+        </button>
+    </div>
+    <div id="dropdown-menu" class="dropdown-content">
+        <a href="english.html">
+          <img src="images/us.png" alt="English Flag" width="20" height="15">
+          English
+        </a>
+        <a href="index.html">
+          <img src="images/tr.png" alt="Turkish Flag" width="20" height="15">
+          Türkçe
+        </a>
+      </div>
+</header>
+<!--loading screen-->
+<div class="loading-screen">
+    <div class="loading-container">
+      <img src="images/ic.png" alt="lgo" class="lgo">
+      <img src="images/dis.png" alt="Gear" class="gear">
+    </div>
+  </div>
+<!--! home section start  -->
+<section class="home" id="anasayfa">
+    <div class="content">
+    <h3>7444 Moon Star Robotics</h3>
+    <p>
+        Biz kimiz? Neler yapıyoruz? Gibi sorulara yanıt bulmak için alttaki butona tıklayabilirsiniz.
+    </p>
+    <a href="#" class="btn">Bizi Tanıyın</a>
+    </div>
+</section>
+<!-- Slideshow Section Start -->
+<!-- Slideshow Section Start -->
+<section class="slideshow" id="haberler">
+    <h1 class="heading">Haberler</h1>
+    <div class="slideshow-container">
+      <div class="slide">
+        <img src="images/1.png" alt="Image 1">
+      </div>
+      <div class="slide">
+        <img src="images/2.png" alt="Image 2">
+      </div>
+      <div class="slide">
+        <img src="images/3.png" alt="Image 3">
+      </div>
+      <div class="prev">
+        <i class="fa-solid fa-chevron-left"></i>
+      </div>
+      <div class="next">
+        <i class="fa-solid fa-chevron-right"></i>
+      </div>
+      <div class="dots"></div>
+    </div>
+    <div class="video">
+      <h1 class="robotumuz">GÜNCEL ROBOTUMUZ</h1>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/oglTfts7dn8?si=UVAkIGFrIjBhajan" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+  </section>
+<!-- Menu Section Start -->
+ <section class="menu" id="galeri">
+    <h1 class="heading">Galeri</h1>
+    <div class="box-container">
+        <div class="box">
+            <div class="box-head">
+                <img src="images/menu-1.jpg" alt="menu">
+                <span class="menu-category">Robot</span>
+                <h3>2024 Crescendo Mozart Robot</h3>
+                <div class="price">2024 Crescendo sezonunda yapmış olduğumuz Mozart adlı robotumuzun bir fotoğrafı.</div>
+            </div>
+        </div>
+        <div class="box">
+            <div class="box-head">
+                <img src="images/menu-2.jpg" alt="menu">
+                <div class="menu-category">Yarışma</div>
+                <h3>2024 İstanbul Regional</h3>
+                <div class="price">2024 senesinde, İstanbul Regional'da çekilmiş bir yarışma karesi.</div>
+            </div>
+        </div>
+        <div class="box">
+            <div class="box-head">
+                <img src="images/menu-3.png" alt="menu">
+                <div class="menu-category">Amerika</div>
+                <h3>2024 Los Angeles</h3>
+                <div class="price">2024 Sezonu Aerospace Valley yarışmasından bir Amerika karesi.</div>
+            </div>
+        </div>
+        <div class="box">
+            <div class="box-head">
+                <img src="images/menu-4.png" alt="menu">
+                <div class="menu-category">Ödül</div>
+                <h3>2024 Haliç Regional Autonomus Award</h3>
+                <div class="price">2024 Haliç Regional yarışmasında gururla kazandığımız "Autonomus" ödülü.</div>
+            </div>
+        </div>
+    </div>
+ </section>
+ <!-- About Section Start -->
+  <section class="about" id="hakkimizda">
+    <h1 class="heading">Hakkımızda</h1>
+    <div class="row">
+        <div class="image">
+            <img src="images/about.jpg" alt="about">
+        </div>
+        <div class="content">
+            <h3>Biz Kimiz? Amaçlarımız Neler?</h3>
+            <p>First Vakfı'nın 7444 numaralı FRC takımıdır. Ayyıldız Robotik Takımımız 2018 yılı Eylül ayında okulumuzun Elektrik-Elektronik, Makine ve Motorlu Araçlar bölümlerinin ortaklığıyla 10 öğrenci 4 mentör ile kurulmuştur. Kısa sürede adından söz ettirmeyi başarmış ekibimiz 2024 yılı itibariyle 50 öğrenciye yükselmiştir. Borusan Asım Kocabıyık Meslek Teknik ve Anadolu Lisesi'nde kurulan takımımız "Sen kazanana kadar bitmeyecek." sloganıyla girişimlerine devam ediyor. 2023 yılında kazandığımız şampiyonluk bizim en büyük motivasyonlarımızdan biridir. Bu şampiyonluk yolunda ilerleyerek takımımıza günden güne deneyim ve eğlenceli vakit katmak bizim başta gelen görevimizdir.</p>
+        </div>
+    </div>
+  </section>
+  <!-- Tulpar Section Start -->
+ <section class="tulpar" id="tulpar">
+   <div class="row">
+       <div class="image">
+           <img src="images/tulpar.png" alt="tulpar">
+       </div>
+       <div class="content">
+           <h3>Tulpar Nedir?</h3>
+           <p>Tulpar, Türk mitolojisinde önemli bir yere sahip olan efsanevi bir varlıktır. Kanatlı bir at olarak tasvir edilen Tulpar, görkemli ve güçlü bir figürdür. Ancak, Tulpar'ın kanatları herkese görünmez; sadece kahramanlar ve yüce ruhlu kişiler bu kanatları görebilirler. Bu özel yetenek, Tulpar'ın gizemini ve kudretini artıran önemli bir unsurdur. Tulpar, umudu ve cesareti sembolize eder, bu nedenle zor zamanlarda insanlara ilham verir ve onları zorlukların üstesinden gelmeye teşvik eder. Tulpar'ın mitolojideki rolü sadece fiziksel bir varlık olmaktan öteye geçer. O, savaşçıların ve kahramanların en sadık yoldaşıdır, onlara hız ve dayanıklılık sağlar. Türk destanlarında, Tulpar'ın üzerindeki kahramanlar genellikle büyük zaferler kazanır ve halklarına barış getirir. Bu yüzden Tulpar, sadece bir mitolojik varlık değil, aynı zamanda bir ulusun ortak hafızasında yer eden bir simgedir. Tulpar'ın efsanesi, Türk kültürünün zengin ve derin köklerine işaret eder. Bu efsanevi at, insanları sadece fiziksel olarak taşımakla kalmaz, aynı zamanda onların ruhlarını da yükseltir. Tulpar'ın kanatları, her daim gökyüzüne açılan bir kapı gibidir; umut, özgürlük ve yüceliğin sembolüdür. Ayrıca 2024 senesine kadar robotumuzun ismi "Tulpar" olarak kalmıştır.</p>
+       </div>
+   </div>
+ </section>
+ <!-- Başarılar Section Start -->
+ <section class="basarilar" id="basarilarimiz">
+    <h1 class="heading">Başarılarımız</h1>
+    <div class="box-container">
+        <div class="box">
+            <div class="box-head">
+                <img src="images/otonom.png" alt="otonom">
+                <span class="menu-category">Yarışma</span>
+                <h3>2024</h3>
+                <p>● 2024 İstanbul Regional yarışmasında 5.lik</p>
+                <p>● 2024 Haliç Regional yarışmasında otonom ödülü ve 5.lik</p>
+                <p>● 2024 Amerika Aerospace Valley yarışmasında 4.lük</p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="box-head">
+                <img src="images/basari2.png" alt="menu">
+                <div class="menu-category">Yarışma</div>
+                <h3>2023</h3>
+                <p>● 2023 FRC Bosphorus Regional "ŞAMPİYON WİNNER" ödülü.</p>
+                <p>● 2023 FRC Bosphorus Regional "Kalite" ödülü.</p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="box-head">
+                <img src="images/basari3.png" alt="menu">
+                <div class="menu-category">Yarışma</div>
+                <h3>2021</h3>
+                <p>● 2021 Teknofest Havacılık, Uzay ve Teknoloji Festivalinde lise takımı olarak, üniversite takımları arasında yarışarak “Sağlıkta Yapay Zeka” alanında finallere kaldık ve elli takım arasında ilk oturumda dördüncü olma başarısını gösterdik.</p>
+                <p>● 2021 FRC Pendik Off Season “Innovation in Control Award” ödülünü kazandık.</p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="box-head">
+                <img src="images/basari4.png" alt="menu">
+                <div class="menu-category">Ödül</div>
+                <h3>2020-2019</h3>
+                <p>● 2020 New York Hudson Valley Regional “First Dean’s List Finalist Award” ödülü.</p>
+                <p>● 2019 FRC Ankara Off Season “Innovation in Control Award” ödülü.</p>
+                <p>● 2019 FRC İstanbul Regional “Industrial Design Award” ödülü. </p>
+            </div>
+        </div>
+    </div>
+ </section>
+ <!-- SP Section Start -->
+ <section class="sp" id="sp">
+    <h1 class="heading">Sosyal Projelerimiz</h1>
+    <div class="row">
+        <div class="image">
+            <img src="images/heforshe.png" alt="heforshe">
+        </div>
+        <div class="content">
+            <h3>#HeForShe ve #IfThenSheCan</h3>
+            <p>#HeForShe gibi cinsiyet eşitliğini savunan başlıklar bu yarışmalardaki en önemli konulardan biridir. FRC'yi sadece erkeklerin yapmadığını ayrıca kız katılımcıların burada önemli bir rol oynadığını göstermek için sürdürülen başlıklardır. #HeForShe ve #IfThenSheCan gibi cinsiyet eşitliğini savunan başlıklar bu yarışmalardaki en önemli konulardan biridir. FRC'yi sadece erkeklerin yapmadığını ayrıca kız katılımcıların burada önemli bir rol oynadığını göstermek için sürdürülen başlıklardır.</p>
+            <h3>Eğitimler ve Sosyal Yardımlar</h3>
+            <p>FRC için verilen "Mühendisliği Yayma" ve "Impact" gibi ödüller, FRC'yi ve katkılarını diğer insanlarla paylaşma ve yayma konularını ele alır. Ayrıca FRC takımlarının farklı okullara veya derneklere yaptığı maddi yardımları da görebilirsiniz.</p>
+        </div>
+    </div>
+  </section>
+  <section class="sp2">
+    <div class="row">
+        <div class="image">
+            <img src="images/ifthanshecan.png" alt="heforshe">
+        </div>
+        <div class="content">
+            <h3>Doğa ve Çevreyi Koruma</h3>
+            <p>FRC yarışmaları sadece insanlara katkı sağlamakla yetinmiyor, ayrıca doğaya ve çevreye olan bilinci arttırmak için çeşitli projeleri ele alıyor. Fidan dikmek, bilinçlendirmek için posterlerin hazırlanması gibi projeler FRC'de mevcut.</p>
+            <h3>Hayvan Haklarını Korumak</h3>
+            <p>FRC hayvan hakları hakkında da çeşitli projeler yapmaktadır. Tüm bu projelerin sonucuna gelirsek FRC'nin aslında kişiye farklı deneyimler ve bilinçler kattığını görebiliriz.</p>
+        </div>
+    </div>
+  </section>
+  <!--İletişim Section Start-->,
+  <section class="contact" id="iletisim">
+    <h1 class="heading">İletİşİm</h1>
+    <div class="row">
+        <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3010.318565463763!2d28.6361706!3d41.0182859!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14caa081d60543f1%3A0x94043b4f7dc377b2!2sBorusan%20As%C4%B1m%20Kocab%C4%B1y%C4%B1k%20Mesleki%20ve%20Teknik%20Anadolu%20Lisesi!5e0!3m2!1str!2str!4v1728084294911!5m2!1str!2str" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="inputbox">
+            <h3>İletişime Geç</h3>
+            <p>Takım Kaptanı</p>
+            <i class="fa-solid fa-phone"><span>Kaan SEVİNÇ: +90 543 517 07 98</span></i>
+            <p>Elektronik ve Programlama Kaptanı</p>
+            <i class="fa-solid fa-phone"><span>Tuğra Cemil KÖZEN: +90 542 640 00 43</span></i>
+            <p>PR Kaptanları</p>
+            <i class="fa-solid fa-phone"><span>Deren TOPRAK: +90 534 796 84 23</span></i>
+            <i class="fa-solid fa-phone"><span>Mecit Özbey ÜLKER: +90 546 883 29 04</span></i>
+            <p>Mentörler</p>
+            <i class="fa-solid fa-phone"><span>Oktay YÜCEL: +90 544 859 62 47</span></i>
+            <i class="fa-solid fa-phone"><span>Akın AKÇA: +90 505 566 05 66</span></i>
+            <i class="fa-solid fa-phone"><span>Kemal ALP: +90 505 772 41 67</span></i>
+            <a href="https://www.instagram.com/moonstarrobotics7444" target="_blank" class="instagram-link">
+                <i class="fa-brands fa-instagram"><span>@moonstarrobotics7444</span></i>
+            </a>
+            <i class="fa-solid fa-earth-americas"><span>www.moonstarrobotics.com</span></i>
+        </div>
+    </div>
+  </section>
+  <!--Footer Section Start-->
+  <section class="footer">
+    <div class="search">
+        <input type="text"
+        class="search-input" placeholder="search">
+        <button class="btn btn-primary">search</button>
+    </div>
+    <div class="credit">
+        <p>&copy; Created by Moon Star Robotics</p>
+    </div>
+  </section>
+  <script src="script/script.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aU/M7pSPA/gEUZQqv1cwx4OnYxTxve5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</body>
+</html>
