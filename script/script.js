@@ -1,129 +1,102 @@
-let slides = document.querySelectorAll('.slide');
-let currentSlide = 0;
+document.addEventListener('DOMContentLoaded', function() {
+  // Elemanları seç
+  const myElement = document.getElementById('myElementId');
+  const loadingScreen = document.querySelector('.loading-screen');
+  const menuToggle = document.getElementById('menu-toggle');
+  const dropdownMenu = document.getElementById('dropdown-menu');
+  const langButton = document.getElementById('lang-button');
+  const langMenu = document.getElementById('lang-menu');
 
-document.querySelector('.next').addEventListener('click', () => {
-  clearInterval(intervalId);
-  currentSlide = (currentSlide + 1) % slides.length;
-  updateSlide();
-  intervalId = setInterval(() => {
-    currentSlide = (currentSlide + 1) % slides.length;
-    updateSlide();
-  }, 15000);
-});
-
-document.querySelector('.prev').addEventListener('click', () => {
-  clearInterval(intervalId);
-  currentSlide--;
-  if (currentSlide < 0) {
-    currentSlide = slides.length - 1;
+  // Elemanların varlığını kontrol et
+  if (myElement) {
+      myElement.onclick = function() {
+          // Tıklama işlemleri
+      };
+  } else {
+      console.error('Element not found');
   }
-  updateSlide();
-  intervalId = setInterval(() => {
-    currentSlide = (currentSlide + 1) % slides.length;
-    updateSlide();
-  }, 15000);
+
+  // Show the loading screen
+  if (loadingScreen) {
+      loadingScreen.style.display = 'flex';
+
+      // Hide the loading screen after 1 second
+      setTimeout(function() {
+          loadingScreen.style.display = 'none';
+      }, 1000);
+  }
+
+  if (menuToggle) {
+      menuToggle.onclick = function(event) {
+          event.stopPropagation(); // Tıklama olayını durdur
+          if (dropdownMenu) {
+              dropdownMenu.style.display = (dropdownMenu.style.display === 'block') ? 'none' : 'block';
+          }
+      };
+  }
+
+  // Dropdown menüyü başlangıçta gizle
+  if (dropdownMenu) {
+      dropdownMenu.style.display = 'none';
+  }
+
+  // Lang Menü Etkileşimleri
+  if (langButton) {
+      langButton.onclick = function(event) {
+          event.stopPropagation(); // Tıklama olayını durdur
+          if (langMenu) {
+              langMenu.style.display = (langMenu.style.display === 'block') ? 'none' : 'block';
+          }
+      };
+  }
+
+  // Sayfa dışına tıkladığınızda dropdown menüyü kapatmak için
+  window.onclick = function(event) {
+      // Eğer tıklanan element menu-toggle veya dropdown menüsü değilse
+      if (!event.target.matches('#menu-toggle') && !event.target.closest('#dropdown-menu')) {
+          const dropdowns = document.getElementsByClassName("dropdown-content");
+          for (let i = 0; i < dropdowns.length; i++) {
+              const openDropdown = dropdowns[i];
+              if (openDropdown.style.display === 'block') {
+                  openDropdown.style.display = 'none';
+              }
+          }
+      }
+
+      // Eğer tıklanan element lang-button veya lang-menu değilse
+      if (!event.target.matches('#lang-button') && !event.target.closest('#lang-menu')) {
+          if (langMenu) {
+              langMenu.style.display = 'none';
+          }
+      }
+  };
 });
 
-function updateSlide() {
-  slides.forEach((slide, index) => {
-    slide.classList.remove('active');
-    if (index === currentSlide) {
-      slide.classList.add('active');
-    }
+window.addEventListener('scroll', function() {
+  const header = document.querySelector('.header');
+  if (window.scrollY > 50) { // 50px'den fazla kaydırıldığında
+      header.classList.add('scrolled');
+  } else {
+      header.classList.remove('scrolled');
+  }
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  const sections = document.querySelectorAll('section'); // 'section' class'ı ile seçiyoruz
+  const navLinks = document.querySelectorAll('.navbar a'); // '.navbar a' ile navigasyon bağlantılarını seçiyoruz
+
+  window.addEventListener('scroll', () => {
+      let scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
+      const offset = 400; // Aktifliğin başlaması için kullanılacak offset
+
+      sections.forEach((section, index) => {
+          const sectionTop = section.offsetTop;
+
+          // Section'un üst kısmından belirli bir offset kadar yukarıda aktif olmasını sağlamak için
+          if (scrollPosition >= sectionTop - offset && scrollPosition < sectionTop + section.clientHeight) {
+              navLinks.forEach(link => link.classList.remove('active')); // Tüm bağlantılardan 'active' sınıfını kaldır
+              navLinks[index].classList.add('active'); // Görüntüdeki section'a karşılık gelen bağlantıya 'active' sınıfını ekle
+          }
+      });
   });
-  updateDots();
-}
-
-function updateDots() {
-  const dots = document.querySelector('.dots');
-  dots.innerHTML = '';
-  for (let i = 0; i < slides.length; i++) {
-    const dot = document.createElement('span');
-    dot.classList.add('dot');
-    if (i === currentSlide) {
-      dot.classList.add('active');
-    }
-    dots.appendChild(dot);
-  }
-}
-
-let intervalId = setInterval(() => {
-  currentSlide = (currentSlide + 1) % slides.length;
-  updateSlide();
-}, 10000);
-
-document.addEventListener("DOMContentLoaded", function() {
-  document.querySelector('.slide').classList.add('active');
-  updateDots();
-  // Close the dropdown menu when the page loads
-  var dropdowns = document.getElementsByClassName("dropdown-content");
-  for (var i = 0; i < dropdowns.length; i++) {
-    var openDropdown = dropdowns[i];
-    openDropdown.style.display = 'none';
-  }
 });
-
-// İlk slaytı göster
-updateSlide();
-
-// Show the loading screen
-document.querySelector('.loading-screen').style.display = 'flex'
-
-// Hide the loading screen after 3 seconds
-setTimeout(function() {
-  document.querySelector('.loading-screen').style.display = 'none';
-}, 3000);
-
-document.getElementById('menu-toggle').onclick = function() {
-  var dropdown = document.getElementById('dropdown-menu');
-  if (dropdown.style.display === 'block') {
-    dropdown.style.display = 'none';
-  } else {
-    dropdown.style.display = 'block';
-  }
-};
-
-document.getElementById('menu-toggle').onclick = function() {
-  var dropdown = document.getElementById('dropdown-menu');
-  if (dropdown.style.display === 'block') {
-    dropdown.style.display = 'none';
-  } else {
-    dropdown.style.display = 'block';
-  }
-};
-
-// Sayfa dışına tıkladığınızda dropdown menüyü kapatmak için
-window.onclick = function(event) {
-  if (!event.target.matches('#menu-toggle') && !event.target.closest('#menu-toggle')) {
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    for (var i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.style.display === 'block') {
-        openDropdown.style.display = 'none';
-      }
-    }
-  }
-};
-
-// Lang Menü Etkileşimleri
-document.getElementById('lang-button').onclick = function() {
-  var dropdown = document.getElementById('lang-menu');
-  if (dropdown.style.display === 'block') {
-    dropdown.style.display = 'none';
-  } else {
-    dropdown.style.display = 'block';
-  }
-};
-
-// Sayfa dışına tıkladığınızda dropdown menüyü kapatmak için
-window.onclick = function(event) {
-  if (!event.target.matches('#lang-button') && !event.target.closest('#lang-button')) {
-    var dropdowns = document.getElementsByClassName("lang-content");
-    for (var i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.style.display === 'block') {
-        openDropdown.style.display = 'none';
-      }
-    }
-  }
-};
