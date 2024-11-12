@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +9,10 @@
     <link rel="icon" type="image/png" href="images/favicon.png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 </head>
 <body>
 <header class="header">
@@ -48,6 +52,9 @@
       <img src="images/dis.png" alt="Gear" class="gear">
     </div>
   </div>
+  <script>
+
+    </script>
 <!--! home section start  -->
 <section class="home" id="anasayfa">
     <div class="content">
@@ -55,7 +62,7 @@
     <p>
         Biz kimiz? Neler yapıyoruz? Gibi sorulara yanıt bulmak için alttaki butona tıklayabilirsiniz.
     </p>
-    <a class="bon" href="#hakkimizda">
+    <a class="bon" href="#hakkimizda" id="start">
         <span>
             Bizi Tanıyın
         </span>
@@ -74,6 +81,16 @@
             pagination : true,
             arrows     : true,
             interval    : 3000, // Slayt geçiş süresi (ms)
+            breakpoints: {
+                1280: {
+                    width: '100%',
+                    height: 'auto',
+                },
+                480: {
+                    width: '100%',
+                    height: 'auto',
+                },
+                }
         });
         // Slayt gösterisini başlat
         splide.mount();
@@ -96,41 +113,52 @@
             </ul>
         </div>
     </div>
+    <div class="splide__progress">
+		<div class="splide__progress__bar">
+		</div>
+  </div>
 </section>
 
 <!-- Menu Section Start -->
  <section class="menu" id="galeri">
     <h1 class="heading">Galerİ</h1>
-    <div class="box-container">
-        <div class="box">
-            <div class="box-head">
-                <img src="images/menu-1.jpg" alt="menu">
-                <h3>2024 Crescendo Mozart Robot</h3>
-                <div class="price">2024 Crescendo sezonunda yapmış olduğumuz Mozart adlı robotumuzun bir fotoğrafı.</div>
-            </div>
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="images/galeri/g1.png" />
+          </div>
+          <div class="swiper-slide">
+            <img src="images/galeri/g2.png" />
+          </div>
+          <div class="swiper-slide">
+            <img src="images/galeri/g3.png" />
+          </div>
+          <div class="swiper-slide">
+            <img src="images/galeri/g4.png" />
+          </div>
+          <div class="swiper-slide">
+            <img src="images/galeri/g5.png" />
+          </div>
+          <div class="swiper-slide">
+            <img src="images/galeri/g6.png" />
+          </div>
+          <div class="swiper-slide">
+            <img src="images/galeri/g7.png" />
+          </div>
+          <div class="swiper-slide">
+            <img src="images/galeri/g8.png" />
+          </div>
+          <div class="swiper-slide">
+            <img src="images/galeri/g9.png" />
+          </div>
         </div>
-        <div class="box">
-            <div class="box-head">
-                <img src="images/menu-2.jpg" alt="menu">
-                <h3>2024 İstanbul Regional</h3>
-                <div class="price">2024 senesinde, İstanbul Regional'da çekilmiş bir yarışma karesi.</div>
-            </div>
-        </div>
-        <div class="box">
-            <div class="box-head">
-                <img src="images/menu-3.png" alt="menu">
-                <h3>2024 Los Angeles</h3>
-                <div class="price">2024 Sezonu Aerospace Valley yarışmasından bir Amerika karesi.</div>
-            </div>
-        </div>
-        <div class="box">
-            <div class="box-head">
-                <img src="images/menu-4.png" alt="menu">
-                <h3>2024 Haliç Regional Autonomus Award</h3>
-                <div class="price">2024 Haliç Regional yarışmasında gururla kazandığımız "Autonomus" ödülü.</div>
-            </div>
-        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    <div class="info">
+        <img src="images/galeri/glrk.png" alt="Fotoğraf" class="right-photo" href="#galeri.html">
     </div>
+      <!-- Swiper JS -->
+      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
  </section>
  <!-- About Section Start -->
   <section class="about" id="hakkimizda">
@@ -182,7 +210,7 @@
             <div class="box-head">
                 <img src="images/basari3.png" alt="menu">
                 <h3>2021</h3>
-                <p>● 2021 Teknofest Havacılık, Uzay ve Teknoloji Festivalinde lise takımı olarak, üniversite takımları arasında yarışarak “Sağlıkta Yapay Zeka” alanında finallere kaldık ve elli takım arasında ilk oturumda dördüncü olma başarısını gösterdik.</p>
+                <p>● 2021 Teknofest "Sağlıkta Yapay Zeka" yarışmasında 4.lük.</p>
                 <p>● 2021 FRC Pendik Off Season “Innovation in Control Award” ödülünü kazandık.</p>
             </div>
         </div>
@@ -207,7 +235,19 @@
     type   : 'loop',
   padding: '2rem',
   width: '190rem',
-  height: 'auto'
+  height: 'auto',
+  margin: '20rem',
+  gap: '1rem',
+  breakpoints: {
+    1280: {
+                    width: '100%',
+                    height: 'auto',
+                },
+                480: {
+                    width: '100%',
+                    height: 'auto',
+                },
+                }
 } );
 
 fadeSplide.mount();
@@ -262,6 +302,8 @@ fadeSplide.mount();
         <p>&copy; Moon Star Robotics 2024</p>
     </div>
   </section>
+  <a href="#" class="top"><i class="fas fa-arrow-up"></i></a>
+</body>
   <script src="script/script.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Splide/3.6.12/splide.min.js"></script>
 </html>
