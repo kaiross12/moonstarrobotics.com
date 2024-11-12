@@ -765,6 +765,17 @@ html::-webkit-scrollbar-thumb{
         align-items: center;
     }
 
+    .homei {
+        min-height: 100vh;
+        background: url(../images/hometing.png)
+        no-repeat;
+        background-size: cover;
+        background-position: center;
+        margin-top: -14.5rem;
+        display: flex;
+        align-items: center;
+    }
+
     .home .content h3{
         font-size: 4rem;
         position: absolute;
