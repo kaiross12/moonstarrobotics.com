@@ -55,7 +55,12 @@
     <p>
         Biz kimiz? Neler yapıyoruz? Gibi sorulara yanıt bulmak için alttaki butona tıklayabilirsiniz.
     </p>
-    <a href="#hakkimizda" class="btn">Bizi Tanıyın</a>
+    <a class="bon" href="#hakkimizda">
+        <span>
+            Bizi Tanıyın
+        </span>
+        <div class="wave"></div>
+    </a>
     </div>
 </section>
 <!-- Slideshow Section Start -->
@@ -195,30 +200,43 @@
  <!-- SP Section Start -->
  <section class="sp" id="sp">
     <h1 class="heading">Sosyal Projelerimiz</h1>
-    <div class="row">
-        <div class="image">
-            <img src="images/heforshe.png" alt="heforshe">
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+    // Fade Slayt Gösterisi
+  var fadeSplide = new Splide( '.fade-splide', {
+    type   : 'loop',
+  padding: '2rem',
+  width: '190rem',
+  height: 'auto'
+} );
+
+fadeSplide.mount();
+});
+    </script>
+        <div class="splide fade-splide">
+            <div class="splide__track">
+                <ul class="splide__list">
+                    <li class="splide__slide">
+                        <img src="images/s1.png" alt="Fade Haber 1">
+                    </li>
+                    <li class="splide__slide">
+                        <img src="images/s2.png" alt="Fade Haber 2">
+                    </li>
+                    <li class="splide__slide">
+                        <img src="images/s3.png" alt="Fade Haber 3">
+                    </li>
+                    <li class="splide__slide">
+                        <img src="images/s4.png" alt="Fade Haber 4"> <!-- Yeni slayt -->
+                    </li>
+                    <li class="splide__slide">
+                        <img src="images/s5.png" alt="Fade Haber 5"> <!-- Yeni slayt -->
+                    </li>
+                </ul>
+            </div>
         </div>
-        <div class="content">
-            <h3>#HeForShe ve #IfThenSheCan</h3>
-            <p>#HeForShe gibi cinsiyet eşitliğini savunan başlıklar bu yarışmalardaki en önemli konulardan biridir. FRC'yi sadece erkeklerin yapmadığını ayrıca kız katılımcıların burada önemli bir rol oynadığını göstermek için sürdürülen başlıklardır. #HeForShe ve #IfThenSheCan gibi cinsiyet eşitliğini savunan başlıklar bu yarışmalardaki en önemli konulardan biridir. FRC'yi sadece erkeklerin yapmadığını ayrıca kız katılımcıların burada önemli bir rol oynadığını göstermek için sürdürülen başlıklardır.</p>
-            <h3>Eğitimler ve Sosyal Yardımlar</h3>
-            <p>FRC için verilen "Mühendisliği Yayma" ve "Impact" gibi ödüller, FRC'yi ve katkılarını diğer insanlarla paylaşma ve yayma konularını ele alır. Ayrıca FRC takımlarının farklı okullara veya derneklere yaptığı maddi yardımları da görebilirsiniz.</p>
-        </div>
-    </div>
+    </section>
   </section>
   <section class="sp2">
-    <div class="row">
-        <div class="image">
-            <img src="images/ifthanshecan.png" alt="heforshe">
-        </div>
-        <div class="content">
-            <h3>Doğa ve Çevreyi Koruma</h3>
-            <p>FRC yarışmaları sadece insanlara katkı sağlamakla yetinmiyor, ayrıca doğaya ve çevreye olan bilinci arttırmak için çeşitli projeleri ele alıyor. Fidan dikmek, bilinçlendirmek için posterlerin hazırlanması gibi projeler FRC'de mevcut.</p>
-            <h3>Hayvan Haklarını Korumak</h3>
-            <p>FRC hayvan hakları hakkında da çeşitli projeler yapmaktadır. Tüm bu projelerin sonucuna gelirsek FRC'nin aslında kişiye farklı deneyimler ve bilinçler kattığını görebiliriz.</p>
-        </div>
-    </div>
   </section>
   <!--İletişim Section Start-->,
   <section class="contact" id="iletisim">
