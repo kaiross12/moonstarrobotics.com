@@ -20,10 +20,10 @@ document.addEventListener('DOMContentLoaded', function() {
   if (loadingScreen) {
       loadingScreen.style.display = 'flex';
 
-      // Hide the loading screen after 1 second
+      // Hide the loading screen after 4 second
       setTimeout(function() {
-          loadingScreen.style.display = 'none';
-      }, 1000);
+          loadingScreen.style.animation = 'closeLoadingScreen 1.5s ease-in-out forwards';
+      }, 2000);
   }
 
   if (menuToggle) {
