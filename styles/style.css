@@ -659,9 +659,8 @@ html::-webkit-scrollbar-thumb{
     }
 
     .home .content h3,
-    .home .content p,
-    .home a{
-        margin-top: -5rem;
+    .home .content p{
+        display: none;
     }
 
     .home a {
