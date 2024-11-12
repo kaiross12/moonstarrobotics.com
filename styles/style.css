@@ -79,6 +79,39 @@ html{
     transform: translateY(-50%);
   }
 
+  .splide__slide {
+    margin: 2rem; /* Increase the margin-right value */
+  }
+
+  .splide__progress__bar {
+    height: 3px;
+    background: #ccc;
+  }
+
+  .top {
+    text-decoration: none;
+    padding: 10px;
+    font-family: sans-serif;
+    color: #000000;
+    background: #ffffff;
+    font-size: 2rem;
+    right: 20px;
+    z-index: 999;
+    border-radius: 100px;
+    position: fixed;
+    bottom: 20px;
+    place-self: end;
+    --offset: 100px; 
+
+    margin-top: calc(100vh + var(--offset));
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+
+  .top a{
+    position: sticky;
+  }
+
 .logo img {
     height: 7rem;
 }
@@ -98,6 +131,40 @@ section{
 
 .header .buttons i{
     color: #fff;
+}
+
+
+.menu .swiper {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  flex: 1; /* Slayt kısmı genişliğini alır */
+  margin-right: 20px; /* Sağdaki bilgi kısmı ile araya boşluk ekler */
+}
+
+.menu .swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+}
+
+.menu .swiper-slide img {
+  display: block;
+  width: 100%;
+}
+
+.menu .info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu .info .right-photo{
+    max-width: 100%;
+    max-height: 100%;
+    padding-top: 3rem;
+    margin: auto;
 }
 
  .home a {
@@ -179,7 +246,7 @@ section{
 }
 
 .splide {
-    max-width: 95rem; /* Slayt gösterisinin maksimum genişliği */
+    width: 130rem; /* Slayt gösterisinin maksimum genişliği */
     margin: 0 auto; /* Ortalamak için */
     position: relative; /* Barın konumlandırılması için */
 }
@@ -192,7 +259,7 @@ section{
 }
 
 .splide__slide img {
-    max-width: 100%; /* Resimlerin genişliğini sınırlamak için */
+    width: 100%; /* Resimlerin genişliğini sınırlamak için */
     height: auto; /* Yüksekliği otomatik ayarlamak için */
     border-radius: 10px; /* İsteğe bağlı: köşeleri yuvarlamak için */
 }
@@ -265,43 +332,6 @@ section{
     color: #ffff;
     background-color: #c52525;
     cursor: pointer;
-}
-
-.menu .box-container{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-    gap: 1.5rem;
-}
-
-.menu .box-container .box{
-    padding: 3rem;
-    background-color: #fff;
-    border-radius: 3rem;
-    background-color: #fff;
-    min-height: 60rem;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-between;
-}
-
-.menu .box-container .box img{
-    width: 100%;
-    object-fit: cover;
-}
-
-.menu .box-container .box .menu-category{
-    font-size: 1.4rem;
-}
-
-.menu .box-container .box h3{
-    font-size: 3rem;
-    padding: 1rem 0;
-}
-
-.menu .box-container .box .price{
-    font-size: 1.5rem;
-    padding: 0.5rem 0;
 }
 
 .heading{
@@ -436,6 +466,10 @@ html::-webkit-scrollbar-thumb{
     margin-top: 5rem;
 }
 
+.basarilar .heading{
+    border-bottom: 0.2rem solid #242424;
+}
+
 .basarilar .box-container{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
@@ -550,10 +584,14 @@ html::-webkit-scrollbar-thumb{
     .header .logo img{
         height: 7rem;
     }
+
+    section {
+        padding: 2rem;
+    }
 }
 
-  /*loading screen*/
-  .loading-screen {
+ /*loading screen*/
+ .loading-screen {
     position: fixed;
     top: 0;
     left: 0;
@@ -582,8 +620,6 @@ html::-webkit-scrollbar-thumb{
     width: 13rem; /* Set the width of the logo */
     height: 13rem; /* Set the height of the logo */
   }
-
-
   
   .gear {
     position: absolute;
@@ -614,10 +650,64 @@ html::-webkit-scrollbar-thumb{
   }
 
   @media only screen and (max-width: 480px) {
-    .header{
-        margin: 0;
-        width: 100%;
+    
+    html, body {
+        overflow-x: hidden;
     }
+
+    .home .content h3,
+    .home .content p,
+    .home a{
+        margin-top: -10rem;
+    }
+
+    .home a {
+        border: 2px solid #d32727;
+        color: #d32727;
+        display: block;
+        font-size: 18px;
+        letter-spacing: 1px;
+        overflow: hidden;
+        padding: 10px 40px;
+        position: relative;
+        text-decoration: none;
+        text-transform: uppercase;
+        background-color: #d32727;
+        margin-right: 20rem;   /* Sağdan dış boşluk */
+        margin-top: 73rem;
+        border-radius: 3rem;
+        font-size: 1.5rem;
+    }
+
+    .header{
+        margin: 0.3rem;
+        position: sticky;
+    }
+
+    .top {
+        text-decoration: none;
+        padding: 10px;
+        font-family: sans-serif;
+        color: #000000;
+        background: #ffffff;
+        font-size: 2rem;
+        right: 3rem;
+        z-index: 999;
+        border-radius: 100px;
+        position: fixed;
+        bottom: 20px;
+        place-self: end;
+        --offset: 100px; 
+    
+        margin-top: calc(100vh + var(--offset));
+        display: grid;
+        grid-template-columns: auto auto;
+      }
+    
+      .top a{
+        position: sticky;
+      }
+
     .dropdown-content {
         position: absolute;
         top: 76%; /* make the dropdown menu open below the button */
@@ -669,9 +759,6 @@ html::-webkit-scrollbar-thumb{
         display: flex;
         align-items: center;
     }
-    .home a{
-        margin-right: 0;
-    }
 
     .home .content h3{
         font-size: 4rem;
@@ -721,48 +808,6 @@ html::-webkit-scrollbar-thumb{
         background-color: #f83434;
         text-transform: none;
         margin-left: 2rem;
-        border-radius: 3rem;
-    }
-    
-    .sp2 .row img{
-        width: 96%;
-        background-color: #f83434;
-        border-radius: 3rem;
-        margin-top: 1rem;
-        margin-left: 1rem;
-    }
-    
-    .sp2 .row{
-        display: flex;
-        flex-wrap: wrap;
-        column-gap: 2rem;
-        background-color: #f83434;
-        border-radius: 3rem;
-    }
-    
-    .sp2 .row .content{
-        flex: 1 1 100rem;
-        background-color: #f83434;
-        border-radius: 3rem;
-    }
-    
-    .sp2 .row .content h3{
-        font-size: 4rem;
-        color: #fff;
-        background-color: #f83434;
-        border-radius: 3rem;
-        margin-top: 1rem;
-        margin-left: 2rem;
-    }
-    
-    .sp2 .row .content p{
-        font-size: 1.5rem;
-        color: #fff;
-        font-weight: 300;
-        padding: 2rem;
-        line-height: 1.8;
-        background-color: #f83434;
-        text-transform: none;
         border-radius: 3rem;
     }
 
@@ -823,96 +868,17 @@ html::-webkit-scrollbar-thumb{
       }
     }
 
-  
-  /* For tablets with a screen width of 481px to 768px */
-  @media only screen and (min-width: 481px) and (max-width: 768px) {
-
-  }
-
 @media (min-width: 1025px) and (max-width: 1280px) {
-    .sp .row img {
-        width: 100%; /* Adjust the width to your desired size */
-        margin-top: 1rem; /* Add some margin to maintain spacing */
-        margin-right: 4rem;
-        margin-left: -1rem;
-        border-radius: 3rem;
-        margin-bottom: 0.5rem;
-    }
-    
-    .sp .row .content {
-        flex: 1 1 50rem;
-        background-color: #f83434;
-        border-radius: 3rem;
-        order: 2;
-    }
-    
-    .sp .row .content h3{
-        font-size: 3rem;
-        color: #fff;
-        background-color: #f83434;
-        border-radius: 3rem;
-        margin-top: 2rem;
-        margin-left: 2rem;
-    }
-    
-    .sp .row .content p{
-        font-size: 1.5rem;
-        color: #fff;
-        font-weight: 300;
-        padding: 1rem 0;
-        line-height: 1.8;
-        background-color: #f83434;
-        text-transform: none;
-        margin-left: 2rem;
-        border-radius: 3rem;
+
+    .home .content p{
+        font-size: 2rem;
+        margin-right: 20rem;
     }
 
-    .sp2 .row .image{
-        flex: 1 1 45rem;
-        background-color: #f83434;
-        border-radius: 3rem;
+    .home .content h3{
+        margin-right: 20rem;
     }
     
-    .sp2 .row img{
-        width: 100%;
-        background-color: #f83434;
-        border-radius: 3rem;
-        margin-top: 0.5rem;
-        margin-left: 0.5rem;
-    }
-    
-    .sp2 .row{
-        display: flex;
-        flex-wrap: wrap;
-        column-gap: 2rem;
-        background-color: #f83434;
-        border-radius: 3rem;
-    }
-    
-    .sp2 .row .content{
-        flex: 1 1 50rem;
-        background-color: #f83434;
-        border-radius: 3rem;
-    }
-    
-    .sp2 .row .content h3{
-        font-size: 4rem;
-        color: #fff;
-        background-color: #f83434;
-        border-radius: 3rem;
-        margin-top: 1rem;
-    }
-    
-    .sp2 .row .content p{
-        font-size: 1.5rem;
-        color: #fff;
-        font-weight: 300;
-        padding: 1rem 0;
-        line-height: 1.8;
-        background-color: #f83434;
-        text-transform: none;
-    }
-
     .basarilar .box-container{
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
