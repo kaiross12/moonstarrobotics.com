@@ -100,6 +100,69 @@ section{
     color: #fff;
 }
 
+ .home a {
+      border: 2px solid #d32727;
+      color: #d32727;
+      display: block;
+      font-size: 18px;
+      letter-spacing: 4px;
+      overflow: hidden;
+      padding: 10px 30px;
+      position: relative;
+      text-decoration: none;
+      text-transform: uppercase;
+      background-color: #d32727;
+      margin-right: 49rem;   /* Sağdan dış boşluk */
+      border-radius: 3rem;
+  }
+  
+  .home a span {
+      position: relative;
+      transition: color 1s ease;
+      z-index: 1;
+      color: #ffffff;
+  }
+  
+  .home a:hover span,
+  .home a:focus span,
+  .home a:active span {
+      color: #d32727;
+  }
+  
+  .home a .wave:before {
+      animation: wave 0.5s linear infinite;
+      background-image: url('../images/btn-wave-byz.png');
+      background-size: contain;
+      content: '';
+      height: 22px;
+      left: 0;
+      position: absolute;
+      top: -22px;
+      width: 100%;
+  }
+  
+  .home a .wave {
+      background-color: #ffffff;
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: calc(100% + 22px);
+      transition: top 1s ease;
+      width: 100%;
+  }
+  
+  .home a:hover .wave,
+  .home a:focus .wave,
+  .home a:active .wave {
+      top: 0;
+  }
+  
+  @keyframes wave {
+      to {
+          background-position-x: 118px;
+      }
+  }
+
 .header {
     background-color: var(--black-color);
     display: flex;
@@ -412,108 +475,8 @@ html::-webkit-scrollbar-thumb{
     text-transform: none;
 }
 
-.sp .row {
-    display: flex;
-    flex-wrap: wrap;
-    column-gap: 2rem;
-    background-color: #f83434;
-    border-radius: 3rem;
-    flex-direction: row-reverse; /* Add this line */
-}
-
-.sp .row .image {
-    flex: 1 1 15rem;
-    background-color: #f83434;
-    border-radius: 3rem;
-    order: 1; /* Add this line */
-}
-
-.sp .row img {
-    width: 100%; /* Adjust the width to your desired size */
-    margin-top: 2rem; /* Add some margin to maintain spacing */
-    margin-right: 4rem;
-    border-radius: 3rem;
-    margin-bottom: 2rem;
-    margin-left: -2rem;
-    margin-right: 2rem;
-}
-
-.sp .row .content {
-    flex: 1 1 100rem;
-    background-color: #f83434;
-    border-radius: 3rem;
-    order: 2;
-}
-
-.sp .row .content h3{
-    font-size: 4rem;
-    color: #fff;
-    background-color: #f83434;
-    border-radius: 3rem;
-    margin-top: 2rem;
-    margin-left: 2rem;
-}
-
-.sp .row .content p{
-    font-size: 1.8rem;
-    color: #fff;
-    font-weight: 300;
-    padding: 1rem 0;
-    line-height: 1.8;
-    background-color: #f83434;
-    text-transform: none;
-    margin-left: 3rem;
-    padding-bottom: 1rem;
-}
-
-.sp2 .row .image{
-    flex: 1 1 10rem;
-    background-color: #f83434;
-    border-radius: 3rem;
-}
-
-.sp2 .row img{
-    width: 100%;
-    background-color: #f83434;
-    border-radius: 3rem;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    margin-left: 2rem;
-}
-
-.sp2 .row{
-    display: flex;
-    flex-wrap: wrap;
-    column-gap: 2rem;
-    background-color: #f83434;
-    border-radius: 3rem;
-}
-
-.sp2 .row .content{
-    flex: 1 1 100rem;
-    background-color: #f83434;
-    border-radius: 3rem;
-}
-
-.sp2 .row .content h3{
-    font-size: 4rem;
-    color: #fff;
-    background-color: #f83434;
-    border-radius: 3rem;
-    margin-top: 1rem;
-    margin-left: 2rem;
-}
-
-.sp2 .row .content p{
-    font-size: 1.8rem;
-    color: #fff;
-    font-weight: 300;
-    padding: 1rem 0;
-    line-height: 1.8;
-    background-color: #f83434;
-    text-transform: none;
-    padding-right: 10rem;
-    margin-left: 2rem;
+.fade-slideshow .splide__slide {
+    padding: 0 20rem; /* Her slayt arasında 20px boşluk */
 }
 
 .contact .row{
@@ -563,6 +526,11 @@ html::-webkit-scrollbar-thumb{
 .footer{
     background-color: #f83434;
     text-align: center;
+}
+
+.footer p {
+    color: white;
+    font-size: 1.5rem;
 }
 
 .footer .credit{
@@ -706,12 +674,6 @@ html::-webkit-scrollbar-thumb{
         position: absolute;
         top: 83%;
         left: 5%;
-    }
-
-    .home .btn{
-        position: absolute;
-        top: 89%;
-        left: 3%;
     }
 
     .sp .row img {
@@ -1006,3 +968,5 @@ html::-webkit-scrollbar-thumb{
         font-size: 1.3rem;
     }
 }
+
+
