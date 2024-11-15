@@ -1,315 +1,954 @@
-<!DOCTYPE html>
-<html lang="tr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moon Star Robotics</title>
-    <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="icon" type="image/png" href="images/favicon.png">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-</head>
-<body>
-<header class="header">
-    <a href="#" class="logo">
-        <img src="images/logo.png" alt="logo">
-    </a>
-    <nav class="navbar">
-        <a href="#anasayfa" class="active">Anasayfa</a>
-        <a href="#haberler">Haberler</a>
-        <a href="#galeri">Galeri</a>
-        <a href="#hakkimizda">Hakkımızda</a>
-        <a href="#tulpar">Tulpar</a>
-        <a href="#basarilarimiz">Başarılarımız</a>
-        <a href="#sp">Sosyal Projelerimiz</a>
-        <a href="#iletisim">İletişim</a>
-    </nav>
-    <div class="buttons">
-        <button id="menu-toggle">
-            <i class="fa-solid fa-globe"></i>
-        </button>
-    </div>
-    <div id="dropdown-menu" class="dropdown-content">
-        <a href="english.html">
-            <img src="images/us.png" alt="English Flag" width="20" height="15">
-            English
-        </a>
-        <a href="index.html">
-            <img src="images/tr.png" alt="Turkish Flag" width="20" height="15">
-            Türkçe
-        </a>
-    </div>
-</header>
-<!--loading screen-->
-<div class="loading-screen">
-    <div class="loading-container">
-      <img src="images/ic.png" alt="lgo" class="lgo">
-      <img src="images/dis.png" alt="Gear" class="gear">
-    </div>
-  </div>
-  <script>
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap");
 
-    </script>
-<!--! home section start  -->
-<section class="home" id="anasayfa">
-    <div class="content">
-    <h3>7444 Moon Star Robotics</h3>
-    <p>
-        Biz kimiz? Neler yapıyoruz? Gibi sorulara yanıt bulmak için alttaki butona tıklayabilirsiniz.
-    </p>
-    <a class="bon" href="#hakkimizda" id="start">
-        <span>
-            Bizi Tanıyın
-        </span>
-        <div class="wave"></div>
-    </a>
-    </div>
-    <style>
-@media only screen and (max-width: 480px) {
-.home a {
-   margin-right: 10rem;
-   display: flex;
+
+:root{
+    --main-color: #242424;
+    --black-color: #242424;
+    --border: 0.1rem solid rgba(255,255,255,0.4);
 }
+
+* {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: 0.2s ease;
 }
-   </style>
-</section>
-<!-- Slideshow Section Start -->
-<!-- Slideshow Section Start -->
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        var splide = new Splide('.splide', {
-            type       : 'loop',
-            perPage    : 1,
-            autoplay   : true,
-            pagination : true,
-            arrows     : true,
-            interval    : 3000, // Slayt geçiş süresi (ms)
-            breakpoints: {
-                1280: {
-                    width: '100%',
-                    height: 'auto',
-                },
-                480: {
-                    width: '100%',
-                    height: 'auto',
-                },
-                }
-        });
-        // Slayt gösterisini başlat
-        splide.mount();
-    });
-</script>
-<section class="slideshow" id="haberler">
-    <h1 class="heading">Haberler</h1>
-    <div class="splide">
-        <div class="splide__track">
-            <ul class="splide__list">
-                <li class="splide__slide">
-                    <img src="images/1.png" alt="Haber 1">
-                </li>
-                <li class="splide__slide">
-                    <img src="images/2.png" alt="Haber 2">
-                </li>
-                <li class="splide__slide">
-                    <img src="images/3.png" alt="Haber 3">
-                </li>
-            </ul>
-        </div>
-    </div>
-    <div class="splide__progress">
-		<div class="splide__progress__bar">
-		</div>
-  </div>
-</section>
 
-<!-- Menu Section Start -->
- <section class="menu" id="galeri">
-    <h1 class="heading">Galerİ</h1>
-    <div class="swiper mySwiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <img src="images/galeri/g1.png" />
-          </div>
-          <div class="swiper-slide">
-            <img src="images/galeri/g2.png" />
-          </div>
-          <div class="swiper-slide">
-            <img src="images/galeri/g3.png" />
-          </div>
-          <div class="swiper-slide">
-            <img src="images/galeri/g4.png" />
-          </div>
-          <div class="swiper-slide">
-            <img src="images/galeri/g5.png" />
-          </div>
-          <div class="swiper-slide">
-            <img src="images/galeri/g6.png" />
-          </div>
-          <div class="swiper-slide">
-            <img src="images/galeri/g7.png" />
-          </div>
-          <div class="swiper-slide">
-            <img src="images/galeri/g8.png" />
-          </div>
-          <div class="swiper-slide">
-            <img src="images/galeri/g9.png" />
-          </div>
-        </div>
-        <div class="swiper-pagination"></div>
-      </div>
-    <div class="info">
-        <img src="images/galeri/glrk.png" alt="Fotoğraf" class="right-photo" href="#galeri.html">
-    </div>
-      <!-- Swiper JS -->
-      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
- </section>
- <!-- About Section Start -->
-  <section class="about" id="hakkimizda">
-    <h1 class="heading">Hakkımızda</h1>
-    <div class="row">
-        <div class="image">
-            <img src="images/about.jpg" alt="about">
-        </div>
-        <div class="content">
-            <h3>Biz Kimiz? Amaçlarımız Neler?</h3>
-            <p>First Vakfı'nın 7444 numaralı FRC takımıdır. Ayyıldız Robotik Takımımız 2018 yılı Eylül ayında okulumuzun Elektrik-Elektronik, Makine ve Motorlu Araçlar bölümlerinin ortaklığıyla 10 öğrenci 4 mentör ile kurulmuştur. Kısa sürede adından söz ettirmeyi başarmış ekibimiz 2024 yılı itibariyle 50 öğrenciye yükselmiştir. Borusan Asım Kocabıyık Meslek Teknik ve Anadolu Lisesi'nde kurulan takımımız "Sen kazanana kadar bitmeyecek." sloganıyla girişimlerine devam ediyor. 2023 yılında kazandığımız şampiyonluk bizim en büyük motivasyonlarımızdan biridir. Bu şampiyonluk yolunda ilerleyerek takımımıza günden güne deneyim ve eğlenceli vakit katmak bizim başta gelen görevimizdir.</p>
-        </div>
-    </div>
-  </section>
-  <!-- Tulpar Section Start -->
- <section class="tulpar" id="tulpar">
-   <div class="row">
-       <div class="image">
-           <img src="images/tulpar.png" alt="tulpar">
-       </div>
-       <div class="content">
-           <h3>Tulpar Nedir?</h3>
-           <p>Tulpar, Türk mitolojisinde önemli bir yere sahip olan efsanevi bir varlıktır. Kanatlı bir at olarak tasvir edilen Tulpar, görkemli ve güçlü bir figürdür. Ancak, Tulpar'ın kanatları herkese görünmez; sadece kahramanlar ve yüce ruhlu kişiler bu kanatları görebilirler. Bu özel yetenek, Tulpar'ın gizemini ve kudretini artıran önemli bir unsurdur. Tulpar, umudu ve cesareti sembolize eder, bu nedenle zor zamanlarda insanlara ilham verir ve onları zorlukların üstesinden gelmeye teşvik eder. Tulpar'ın mitolojideki rolü sadece fiziksel bir varlık olmaktan öteye geçer. O, savaşçıların ve kahramanların en sadık yoldaşıdır, onlara hız ve dayanıklılık sağlar. Türk destanlarında, Tulpar'ın üzerindeki kahramanlar genellikle büyük zaferler kazanır ve halklarına barış getirir. Bu yüzden Tulpar, sadece bir mitolojik varlık değil, aynı zamanda bir ulusun ortak hafızasında yer eden bir simgedir. Tulpar'ın efsanesi, Türk kültürünün zengin ve derin köklerine işaret eder. Bu efsanevi at, insanları sadece fiziksel olarak taşımakla kalmaz, aynı zamanda onların ruhlarını da yükseltir. Tulpar'ın kanatları, her daim gökyüzüne açılan bir kapı gibidir; umut, özgürlük ve yüceliğin sembolüdür. Ayrıca 2024 senesine kadar robotumuzun ismi "Tulpar" olarak kalmıştır.</p>
-       </div>
-   </div>
- </section>
- <!-- Başarılar Section Start -->
- <section class="basarilar" id="basarilarimiz">
-    <h1 class="heading">Başarılarımız</h1>
-    <div class="box-container">
-        <div class="box">
-            <div class="box-head">
-                <img src="images/otonom.png" alt="otonom">
-                <h3>2024</h3>
-                <p>● 2024 Haliç Regional yarışmasında otonom ödülü</p>
-            </div>
-        </div>
-        <div class="box">
-            <div class="box-head">
-                <img src="images/basari2.png" alt="menu">
-                <h3>2023</h3>
-                <p>● 2023 FRC Bosphorus Regional "ŞAMPİYON WİNNER" ödülü.</p>
-                <p>● 2023 FRC Bosphorus Regional "Kalite" ödülü.</p>
-            </div>
-        </div>
-        <div class="box">
-            <div class="box-head">
-                <img src="images/basari3.jpg" alt="menu">
-                <h3>2021</h3>
-                <p>● 2021 Teknofest "Sağlıkta Yapay Zeka" yarışmasında 4.lük.</p>
-                <p>● 2021 FRC Pendik Off Season “Innovation in Control Award” ödülünü kazandık.</p>
-            </div>
-        </div>
-        <div class="box">
-            <div class="box-head">
-                <img src="images/basari4.png" alt="menu">
-                <h3>2020-2019</h3>
-                <p>● 2020 New York Hudson Valley Regional “First Dean’s List Finalist Award” ödülü.</p>
-                <p>● 2019 FRC Ankara Off Season “Innovation in Control Award” ödülü.</p>
-                <p>● 2019 FRC İstanbul Regional “Industrial Design Award” ödülü. </p>
-            </div>
-        </div>
-    </div>
- </section>
- <!-- SP Section Start -->
- <section class="sp" id="sp">
-    <h1 class="heading">Sosyal Projelerimiz</h1>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-    // Fade Slayt Gösterisi
-  var fadeSplide = new Splide( '.fade-splide', {
-    type   : 'loop',
-  padding: '2rem',
-  width: '190rem',
-  height: 'auto',
-  margin: '20rem',
-  gap: '1rem',
-  breakpoints: {
-    1280: {
-                    width: '100%',
-                    height: 'auto',
-                },
-                480: {
-                    width: '100%',
-                    height: 'auto',
-                },
-                }
-} );
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+}
 
-fadeSplide.mount();
-});
-    </script>
-        <div class="splide fade-splide">
-            <div class="splide__track">
-                <ul class="splide__list">
-                    <li class="splide__slide">
-                        <img src="images/s1.png" alt="Fade Haber 1">
-                    </li>
-                    <li class="splide__slide">
-                        <img src="images/s2.png" alt="Fade Haber 2">
-                    </li>
-                    <li class="splide__slide">
-                        <img src="images/s3.png" alt="Fade Haber 3">
-                    </li>
-                    <li class="splide__slide">
-                        <img src="images/s4.png" alt="Fade Haber 4"> <!-- Yeni slayt -->
-                    </li>
-                    <li class="splide__slide">
-                        <img src="images/s5.png" alt="Fade Haber 5"> <!-- Yeni slayt -->
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </section>
-  </section>
-  <section class="sp2">
-  </section>
-  <!--İletişim Section Start-->,
-  <section class="contact" id="iletisim">
-    <h1 class="heading">İletİşİm</h1>
-    <div class="row">
-        <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3010.318565463763!2d28.6361706!3d41.0182859!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14caa081d60543f1%3A0x94043b4f7dc377b2!2sBorusan%20As%C4%B1m%20Kocab%C4%B1y%C4%B1k%20Mesleki%20ve%20Teknik%20Anadolu%20Lisesi!5e0!3m2!1str!2str!4v1728084294911!5m2!1str!2str" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        <div class="inputbox">
-            <h3>İletişime Geç</h3>
-            <p>Mentörler</p>
-            <i class="fa-solid fa-phone"><span>Oktay YÜCEL: +90 544 859 62 47</span></i>
-            <i class="fa-solid fa-phone"><span>Akın AKÇA: +90 505 566 05 66</span></i>
-            <i class="fa-solid fa-phone"><span>Kemal ALP: +90 505 772 41 67</span></i>
-            <a href="https://www.instagram.com/moonstarrobotics7444" target="_blank" class="instagram-link" >
-                <i class="fa-brands fa-instagram" style="color: white;"><span style="color: white;">@moonstarrobotics7444</span></i>
-            </a>
-            <i class="fa-solid fa-earth-americas"><span>www.moonstarrobotics.com</span></i>
-        </div>
-    </div>
-  </section>
-  <!--Footer Section Start-->
-  <section class="footer">
-    <div class="credit">
-        <p>&copy; Moon Star Robotics 2024</p>
-    </div>
-  </section>
-  <a href="#" class="top"><i class="fas fa-arrow-up"></i></a>
-</body>
-  <script src="script/script.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Splide/3.6.12/splide.min.js"></script>
-</html>
+.dropdown-content {
+    position: absolute;
+    top: 83%; /* make the dropdown menu open below the button */
+    left: 85%;
+    width: 10%;
+    height: auto;
+    background-color: white;
+    padding-left: 1.5rem;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    z-index: 110%;
+    border-radius: 3rem;
+  }
+
+  .dropdown-content img {
+    margin-right: 8px; /* Yazı ve fotoğraf arasında boşluk bırakmak için */
+    width: 15%; /* Genişliği ayarlayın */
+    height: auto; /* Yüksekliği otomatik ayarlayın */
+    object-fit: contain; /* Fotoğrafın tamamını göstermek için contain kullanın */
+}
+
+.dropdown-content a {
+    display: flex; /* Flexbox kullanarak içeriği hizalamak için */
+    align-items: center; /* Dikey olarak ortalamak için */
+    justify-content: center; /* Yatay olarak ortalamak için */
+    color: black;
+    padding: 12px 5px;
+    text-decoration: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-right: 16px;
+    overflow: visible; /* add overflow visible to buttons */
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+    border-radius: 1.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.navbar .btnta .flag-icon {
+    width: 35px;
+    height: 35px;
+  }
+
+  .btnta {
+    position: absolute;
+    right: 170px;
+    top: 55%;
+    transform: translateY(-50%);
+  }
+
+  .splide__slide {
+    margin: 2rem; /* Increase the margin-right value */
+  }
+
+  .splide__progress__bar {
+    height: 3px;
+    background: #ccc;
+  }
+
+  .top {
+    text-decoration: none;
+    padding: 15px;
+    font-family: sans-serif;
+    color: red;
+    background: #ffffff;
+    font-size: 2rem;
+    right: 20px;
+    z-index: 999;
+    border-radius: 100px;
+    position: fixed;
+    bottom: 20px;
+    place-self: end;
+    --offset: 100px; 
+    width: 50px;
+    display: flex;
+    justify-content: center;
+
+    margin-top: calc(100vh + var(--offset));
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+
+  .top a{
+    position: sticky;
+  }
+
+.logo img {
+    height: 7rem;
+}
+
+body{
+    background-color: var(--main-color);
+}
+
+section{
+    padding: 3.75rem 7%;
+}
+
+.header .logo img{
+    height: 7rem;
+    margin-top: 0.5rem;
+}
+
+.header .buttons i{
+    color: #fff;
+}
+
+
+.menu .swiper {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  flex: 1; /* Slayt kısmı genişliğini alır */
+  margin-right: 20px; /* Sağdaki bilgi kısmı ile araya boşluk ekler */
+}
+
+.menu .swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+}
+
+.menu .swiper-slide img {
+  display: block;
+  width: 100%;
+}
+
+.menu .info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu .info .right-photo{
+    max-width: 100%;
+    max-height: 100%;
+    padding-top: 3rem;
+    margin: auto;
+}
+
+ .home a {
+      border: 2px solid #d32727;
+      color: #d32727;
+      display: block;
+      font-size: 18px;
+      letter-spacing: 1px;
+      overflow: hidden;
+      padding: 10px 30px;
+      position: relative;
+      text-decoration: none;
+      text-transform: uppercase;
+      background-color: #d32727;
+      margin-right: 52rem;   /* Sağdan dış boşluk */
+      border-radius: 3rem;
+  }
+  
+  .home a span {
+      position: relative;
+      transition: color 1s ease;
+      z-index: 1;
+      color: #ffffff;
+  }
+  
+  .home a:hover span,
+  .home a:focus span,
+  .home a:active span {
+      color: #d32727;
+  }
+  
+  .home a .wave:before {
+      animation: wave 0.5s linear infinite;
+      background-image: url('../images/btn-wave-byz.png');
+      background-size: contain;
+      content: '';
+      height: 22px;
+      left: 0;
+      position: absolute;
+      top: -22px;
+      width: 100%;
+  }
+  
+  .home a .wave {
+      background-color: #ffffff;
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: calc(100% + 22px);
+      transition: top 1s ease;
+      width: 100%;
+  }
+  
+  .home a:hover .wave,
+  .home a:focus .wave,
+  .home a:active .wave {
+      top: 0;
+  }
+  
+  @keyframes wave {
+      to {
+          background-position-x: 118px;
+      }
+  }
+
+.header {
+    background-color: var(--black-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 7%;
+    margin: 2rem;
+    box-shadow: 0px 0px 17px -2px rgba(0,0,0,0.75);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: width 0.3s ease; /* Genişleme için geçiş efekti */
+    width: 98%; /* Başlangıçta tam genişlikte */
+}
+
+.splide {
+    width: 130rem; /* Slayt gösterisinin maksimum genişliği */
+    margin: 0 auto; /* Ortalamak için */
+    position: relative; /* Barın konumlandırılması için */
+}
+
+.splide__slide {
+    display: flex; /* Flexbox kullanarak içeriği ortalamak için */
+    justify-content: center; /* Yatayda ortala */
+    align-items: center; /* Dikeyde ortala */
+    text-align: center; /* Metni ortalamak için */
+}
+
+.splide__slide img {
+    width: 100%; /* Resimlerin genişliğini sınırlamak için */
+    height: auto; /* Yüksekliği otomatik ayarlamak için */
+    border-radius: 10px; /* İsteğe bağlı: köşeleri yuvarlamak için */
+}
+
+.splide__pagination {
+    bottom: 60rem; /* Noktaların alt kenara olan mesafesini ayarlayın */
+}
+
+.header.scrolled {
+    width: calc(100% + 20px); /* Aşağı kaydırıldığında genişleyecek */
+    margin-left: -10px; /* Sol kenar için negatif margin */
+    margin-right: -10px; /* Sağ kenar için negatif margin */
+}
+
+.header .navbar a{
+    margin: 0 1rem;
+    font-size: 1.6rem;
+    color: #ffff;
+    border-bottom: 0.1rem solid transparent;
+}
+
+.header .navbar .active,
+.header .navbar a:hover{
+    border-color: #ffff;
+    padding-bottom: 0.5rem;
+}
+
+.header .buttons button {
+    cursor: pointer;
+    font-size: 2.5rem;
+    margin-left: 2rem;
+    background-color: transparent;
+}
+
+.home {
+    min-height: 100vh;
+    background: url(../images/home.png)
+    no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-top: -14.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.home .content {
+    max-width: 70rem;
+}
+
+.home .content h3 {
+    font-size: 10rem;
+    color: #ffff;
+    line-height: 1;
+}
+
+.home .content p {
+    font-size: 2rem;
+    font-weight: 300;
+    line-height: 1.5;
+    padding: 1rem 0;
+    color: #fff;
+}
+
+.btn{
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 2rem 3.75rem;
+    border-radius: 30rem;
+    font-size: 1.7rem;
+    color: #ffff;
+    background-color: #c52525;
+    cursor: pointer;
+}
+
+.heading{
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 4rem;
+    margin-bottom: 3.5rem;
+    border-bottom: 0.1rem solid #f83434;
+}
+
+html::-webkit-scrollbar{
+    width: 0.8rem;
+    background-color: white;
+}
+
+html::-webkit-scrollbar-track{
+    background-color: #202020;
+}
+
+html::-webkit-scrollbar-thumb{
+    border-radius: 3rem;
+    background-color: #f83434;
+}
+
+.menu .box-container .box img{
+    border-radius: 3rem;
+    background-color: #f83434;
+}
+
+.about .row .image{
+    flex: 1 1 10rem;
+    background-color: #f83434;
+    border-radius: 3rem;
+}
+
+.about .row img{
+    width: 100%;
+    background-color: #f83434;
+    border-radius: 2rem;
+    margin-top: 2rem;
+    margin-left: 2rem;
+    margin-bottom: 2rem;
+}
+
+.about .row{
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 2rem;
+    background-color: #f83434;
+    border-radius: 3rem;
+}
+
+.about .row .content{
+    flex: 1 1 45rem;
+    background-color: #f83434;
+    border-radius: 3rem;
+}
+
+.about .row .content h3{
+    font-size: 4rem;
+    color: #fff;
+    background-color: #f83434;
+    border-radius: 3rem;
+    margin-top: 1rem;
+    margin-left: 1.5rem;
+}
+
+.about .row .content p{
+    font-size: 1.8rem;
+    color: #fff;
+    font-weight: 300;
+    padding: 1rem 0;
+    line-height: 1.8;
+    background-color: #f83434;
+    text-transform: none;
+    margin-left: 1.5rem;
+}
+
+.tulpar .row {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 2rem;
+    background-color: #f83434;
+    border-radius: 3rem;
+    flex-direction: row-reverse; /* Add this line */
+}
+
+.tulpar .row .image {
+    flex: 1 1 1rem;
+    background-color: #f83434;
+    border-radius: 3rem;
+    order: 1; /* Add this line */
+}
+
+.tulpar .row img {
+    width: 95%; /* Adjust the width to your desired size */
+    margin-top: 2rem; /* Add some margin to maintain spacing */
+    margin-right: 4rem;
+    border-radius: 3rem;
+    margin-bottom: 2rem;
+}
+
+.tulpar .row .content {
+    flex: 1 1 45rem;
+    background-color: #f83434;
+    border-radius: 3rem;
+    order: 2;
+}
+
+.tulpar .row .content h3{
+    font-size: 4rem;
+    color: #fff;
+    background-color: #f83434;
+    border-radius: 3rem;
+    margin-top: 2rem;
+    margin-left: 2rem;
+}
+
+.tulpar .row .content p{
+    font-size: 1.8rem;
+    color: #fff;
+    font-weight: 300;
+    padding: 1rem 0;
+    line-height: 1.8;
+    background-color: #f83434;
+    text-transform: none;
+    margin-left: 2rem;
+}
+
+.basarilar{
+    background-color: #f83434;
+    margin-top: 5rem;
+}
+
+.basarilar .heading{
+    border-bottom: 0.2rem solid #242424;
+}
+
+.basarilar .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+}
+
+.basarilar .box-container .box{
+    padding: 3rem;
+    background-color: #fff;
+    border-radius: 3rem;
+    background-color: #fff;
+    min-height: 60rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.basarilar .box-container .box img{
+    width: 100%;
+    object-fit: cover;
+    border-radius: 3rem;
+}
+
+.basarilar .box-container .box .menu-category{
+    font-size: 1.4rem;
+}
+
+.basarilar .box-container .box h3{
+    font-size: 5rem;
+    padding: 1rem 0;
+}
+
+.basarilar .box-container .box p{
+    font-size: 2rem;
+    padding: 0.5rem 0;
+    text-transform: none;
+}
+
+.fade-slideshow .splide__slide {
+    padding: 0 20rem; /* Her slayt arasında 20px boşluk */
+}
+
+.contact .row{
+    display: flex;
+    background-color: #f83434;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.contact .row .map{
+    flex: 1 1 45rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+.contact .row .inputbox{
+    flex: 1 1 45rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+.contact .row a i,
+.contact .row a i span{
+    color: #00000080;
+}
+
+.contact .row h3{
+    text-transform: none;
+    color: white;
+    font-size: 2rem;
+    padding: 2rem;
+}
+
+.contact .row p,
+.contact .row i,
+.contact .row i span{
+    flex: 1 1;
+    display: flex;
+    line-height: 1.8;
+    text-transform: none;
+    color: white;
+    font-size: 1.5rem;
+    margin-left: 1rem;
+    padding: 0.2rem;
+}
+
+.footer{
+    background-color: #f83434;
+    text-align: center;
+}
+
+.footer p {
+    color: white;
+    font-size: 1.5rem;
+}
+
+.footer .credit{
+    font-size: 1rem;
+    margin-top: 2rem;
+}
+
+@media (max-width: 991px){
+    html{
+        font-size: 55%;
+    }
+
+    .header{
+        padding: 1.5rem 2rem;
+    }
+
+    .header .logo img{
+        height: 7rem;
+    }
+
+    section {
+        padding: 2rem;
+    }
+}
+
+ /*loading screen*/
+ .loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #ffffff; /* Set the background color to a semi-transparent gray */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .loading-container {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin: 40px auto;
+  }
+  
+  .lgo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    width: 13rem; /* Set the width of the logo */
+    height: 13rem; /* Set the height of the logo */
+  }
+  
+  .gear {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 15rem;
+    height: 15rem;
+    animation: spin 2s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+      transform: translate(-50%, -50%) rotate(360deg);
+    }
+  }
+
+  @keyframes closeLoadingScreen{
+    0%{
+        top: 0;
+    }
+    100%{
+        top: -100%;
+    }
+  }
+
+  @media only screen and (max-width: 480px) {
+    
+    html, body {
+        overflow-x: hidden;
+    }
+
+    .home .content h3,
+    .home .content p{
+        display: none;
+    }
+
+    .home a {
+        border: 2px solid #d32727;
+        color: #d32727;
+        display: block;
+        font-size: 18px;
+        letter-spacing: 1px;
+        overflow: hidden;
+        padding: 10px 40px;
+        position: relative;
+        text-decoration: none;
+        text-transform: uppercase;
+        background-color: #d32727;
+        margin-right: 20rem;   /* Sağdan dış boşluk */
+        margin-top: 73rem;
+        border-radius: 3rem;
+        font-size: 1.5rem;
+    }
+
+    .header{
+        margin: 0.3rem;
+        position: sticky;
+    }
+
+    .top {
+        text-decoration: none;
+        padding: 10px;
+        font-family: sans-serif;
+        color: red;
+        background: #ffffff;
+        font-size: 2rem;
+        right: 3rem;
+        z-index: 999;
+        border-radius: 100px;
+        position: fixed;
+        bottom: 20px;
+        place-self: end;
+        --offset: 100px; 
+    
+        margin-top: calc(100vh + var(--offset));
+        display: grid;
+        grid-template-columns: auto auto;
+      }
+    
+      .top a{
+        position: sticky;
+      }
+      .top i{
+        color: red;
+      }
+
+    .dropdown-content {
+        position: absolute;
+        top: 76%; /* make the dropdown menu open below the button */
+        left: 63%;
+        width: 35%;
+        height: auto;
+        background-color: white;
+        padding-left: 1.5rem;
+        padding-bottom: 1rem;
+        padding-top: 1rem;
+        z-index: 110%;
+        border-radius: 3rem;
+      }
+    
+      .dropdown-content img {
+        margin-right: 8px; /* Yazı ve fotoğraf arasında boşluk bırakmak için */
+        width: 15%; /* Genişliği ayarlayın */
+        height: auto; /* Yüksekliği otomatik ayarlayın */
+        object-fit: contain; /* Fotoğrafın tamamını göstermek için contain kullanın */
+    }
+    
+    .dropdown-content a {
+        display: flex; /* Flexbox kullanarak içeriği hizalamak için */
+        align-items: center; /* Dikey olarak ortalamak için */
+        justify-content: center; /* Yatay olarak ortalamak için */
+        color: black;
+        padding: 12px 5px;
+        text-decoration: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        margin-right: 16px;
+        overflow: visible; /* add overflow visible to buttons */
+    }
+    
+    .dropdown-content a:hover {
+        background-color: #ddd;
+        border-radius: 1.5rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .home {
+        min-height: 100vh;
+        background: url(../images/homet.png)
+        no-repeat;
+        background-size: cover;
+        background-position: center;
+        margin-top: -14.5rem;
+        display: flex;
+        align-items: center;
+    }
+
+    .home .content h3{
+        font-size: 4rem;
+        position: absolute;
+        top: 75%;
+        left: 5%;
+
+    }
+
+    .home .content p{
+        font-size: 1.5rem;
+        position: absolute;
+        top: 83%;
+        left: 5%;
+    }
+
+    .sp .row img {
+        width: 95%; /* Adjust the width to your desired size */
+        margin-top: 1rem; /* Add some margin to maintain spacing */
+        margin-right: 4rem;
+        margin-left: 1rem;
+        border-radius: 3rem;
+    }
+    
+    .sp .row .content {
+        flex: 1 1 100rem;
+        background-color: #f83434;
+        border-radius: 3rem;
+        order: 2;
+    }
+    
+    .sp .row .content h3{
+        font-size: 4rem;
+        color: #fff;
+        background-color: #f83434;
+        border-radius: 3rem;
+        margin-top: 2rem;
+        margin-left: 2rem;
+    }
+    
+    .sp .row .content p{
+        font-size: 1.5rem;
+        color: #fff;
+        font-weight: 300;
+        padding: 1rem 0;
+        line-height: 1.8;
+        background-color: #f83434;
+        text-transform: none;
+        margin-left: 2rem;
+        border-radius: 3rem;
+    }
+
+    .about .row .content p{
+        padding: 2rem;
+        border-radius: 3rem;
+    }   
+
+    .about .row .content h3{
+        margin-left: 2rem;
+    }
+
+    .about .row img{
+        width: 91%;
+    }
+
+    .tulpar .row .content p{
+        padding: 2rem;
+        border-radius: 3rem;
+        line-height: 1.8;
+        margin-left: 0.5rem;
+    }   
+
+    .tulpar .row .content h3{
+        margin-left: 2rem;
+    }
+
+    .tulpar .row img{
+        width: 96%;
+        margin-left: 1rem;
+        margin-top: 1rem;
+    }
+
+    .navbar .btnta .flag-icon {
+        width: 35px;
+        height: 35px;
+        display: block;
+        visibility: visible;
+      }
+    
+      .btnta {
+        position: absolute;
+        right: 45px;
+        top: 50%;
+        transform: translateY(-50%);
+        display: block;
+        visibility: visible;
+      }
+      
+      .header .navbar {
+        overflow-x: auto;
+        white-space: nowrap;
+        margin-right: 3rem;
+      }
+      .header .navbar a {
+        display: inline-block;
+        font-size: 1.6rem;
+      }
+    }
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+
+    .home .content p{
+        font-size: 2rem;
+        margin-right: 20rem;
+    }
+
+    .home .content h3{
+        margin-right: 20rem;
+    }
+    
+    .basarilar .box-container{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+        gap: 1.5rem;
+    }
+
+    .basarilar .box-container .box {
+        padding: 1rem; /* Paddingi azaltarak iç boşluğu küçültüyoruz */
+        width: 100%;
+        height: auto;
+        background-color: #fff;
+        border-radius: 3rem;
+        min-height: 60rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+    
+    .basarilar .box-container .box img {
+        width: 100%;
+        object-fit: cover;
+        border-radius: 3rem;
+        margin-bottom: 1rem; /* Görsel ile içerik arasındaki mesafeyi azalt */
+    }
+    
+    .basarilar .box-container .box .menu-category {
+        font-size: 1.4rem;
+        margin-bottom: 0.1rem; /* Menü kategorisi ile başlık arasındaki mesafeyi azalt */
+    }
+    
+    .basarilar .box-container .box h3 {
+        font-size: 4rem;
+        padding: 0.2rem 0; /* Başlık içindeki paddingi azalt */
+        margin-bottom: 0.2rem; /* Başlık ile paragraf arasındaki mesafeyi azalt */
+    }
+    
+    .basarilar .box-container .box p {
+        font-size: 1.5rem;
+        padding: 0.5rem 0;
+        text-transform: none;
+        margin-bottom: 1rem; /* Paragraf ile diğer elemanlar arasındaki mesafeyi azalt */
+    }
+
+    .menu .box-container{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+        gap: 1.5rem;
+    }
+
+    .about .row .content p{
+        font-size: 1.24rem;
+        margin-right: 1rem;
+        color: #fff;
+        font-weight: 300;
+        padding: 1rem 0;
+        line-height: 1.8;
+        background-color: #f83434;
+        text-transform: none;
+        margin-left: 1.5rem;
+        border-radius: 3;
+    }
+    
+    .tulpar .row .content p{
+        font-size: 1.3rem;
+    }
+}
+
